@@ -27,7 +27,7 @@
 	}
 ?>
 
-<div id="subnav" class="bg-light d-none d-lg-block">
+<div id="subnav" class="bg-blue d-none d-lg-block">
 	<div class="container">
 
 		<?php if ($page_ids): ?>

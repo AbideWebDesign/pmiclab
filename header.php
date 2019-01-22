@@ -20,7 +20,8 @@
 	<?php wp_head(); ?>
 	<script type="text/javascript">
 		jQuery(function ($) {
-			
+// 			$('body').scrollspy({ target: '#nav-main' })
+
 			// Override Bootstrap dropdown behavior
 			$('#menu-primary .dropdown > a').click(function() {
 				location.href = $(this).attr('href');
@@ -41,7 +42,39 @@
 			$('body')
 				.on('mouseenter mouseleave','.dropdown',toggleDropdown)
 				.on('click', '.dropdown-menu a', toggleDropdown);
+			
+			// Sticky navbar
+			// =========================
 
+            // Custom function which toggles between sticky class (is-sticky)
+            var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                var stickyHeight = sticky.outerHeight();
+                var stickyTop = stickyWrapper.offset().top;
+                if (scrollElement.scrollTop() >= stickyTop) {
+                    stickyWrapper.height(stickyHeight);
+                    sticky.addClass("is-sticky");
+                }
+                else {
+                    sticky.removeClass("is-sticky");
+                    stickyWrapper.height('auto');
+                }
+            };
+
+            // Find all data-toggle="sticky-onscroll" elements
+            $('[data-toggle="sticky-onscroll"]').each(function () {
+                var sticky = $(this);
+                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                sticky.before(stickyWrapper);
+                sticky.addClass('sticky');
+
+                // Scroll & resize events
+                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                    stickyToggle(sticky, stickyWrapper, $(this));
+                });
+
+                // On page load
+                stickyToggle(sticky, stickyWrapper, $(window));
+            });
 		});
 	</script>
 
@@ -72,7 +105,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="nav-main">
+	<div id="nav-main" data-toggle="sticky-onscroll">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-dark">	
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-primary" aria-controls="menu-primary" aria-expanded="false" aria-label="Toggle navigation">
