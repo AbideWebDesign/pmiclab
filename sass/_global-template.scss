@@ -272,6 +272,33 @@ body ol, body ul, body dl {
 		line-height: $line-height-sm;
 	}
 }
+
+/*
+** Component: List Group Block
+*/
+.accordion {
+	.card {
+		border: none;
+		
+		.card-header {
+			background-color: transparent;
+			padding: 0 0 .75rem 0;
+			margin-bottom: .75rem;
+			
+			h5 {
+				color: $brand-blue;
+				cursor: pointer;
+			}
+		}
+		.card-body {
+			padding: .75rem 0;
+			
+			p:last-child {
+				margin-bottom: .75rem;
+			}
+		}
+	}
+}
 /*
 ** Component: Footer
 */

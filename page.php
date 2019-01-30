@@ -49,6 +49,12 @@ get_header();
 						
 						<?php endwhile; ?>
 						
+						<?php if (get_field('list_group_title')): ?>
+			
+							<?php get_template_part('template-parts/block', 'list-group'); ?>
+			
+						<?php endif; ?>
+						
 					</div>
 					<div class="col-lg-3">
 						
