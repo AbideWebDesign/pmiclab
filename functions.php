@@ -103,7 +103,7 @@ add_image_size('col-4', 434);
 add_image_size('col-5', 542);
 add_image_size('col-6', 650);
 add_image_size('col-7', 759);
-add_image_size('hero banner', 1600, 250, true);
+add_image_size('hero banner', 1600, 450, true);
 add_image_size('hero banner sm', 767, 250, true);
 
 /**

@@ -328,7 +328,9 @@ $hr-border-width:             $border-width !default;
 $mark-padding:                .2em !default;
 
 $dt-font-weight:              $font-weight-bold !default;
-
+$box-shadow-bottom:		      0 3px 10px -3px rgba(0,0,0,0.9);
+$box-shadow-top:			  0 -2px 10px -2px rgba(0,0,0,0.7);
+$box-shadow-sides:			  0 2px 10px 0 rgba(0,0,0,0.20);
 $kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
 $nested-kbd-font-weight:      $font-weight-bold !default;
 

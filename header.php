@@ -20,8 +20,6 @@
 	<?php wp_head(); ?>
 	<script type="text/javascript">
 		jQuery(function ($) {
-// 			$('body').scrollspy({ target: '#nav-main' })
-
 			// Override Bootstrap dropdown behavior
 			$('#menu-primary .dropdown > a').click(function() {
 				location.href = $(this).attr('href');
@@ -84,21 +82,17 @@
 	<div id="header" class="py-1">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-12 col-md-4 col-lg-6 text-center text-lg-left mb-1 mb-md-0 align-self-center">
+				<div class="col-12 col-sm-4 col-md-4 col-lg-6 text-center text-lg-left align-self-center">
 					<a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image('210', 'full', false, array("class" => "img-fluid")); ?></a>
 				</div>
-				<div class="col-12 col-md-8 col-lg-6">
+				<div class="col-12 col-sm-8 col-md-8 col-lg-6 d-none d-sm-block">
 					<div class="row">
-						<div class="col-12 d-none d-lg-block">
-							<div id="header-sub">PRECISION MEASUREMENTS AND INSTRUMENTS CORPORATION</div>
+						<div class="col-12 col-md-10 text-right">
+							<div id="header-sub" class="d-none d-md-block">PRECISION TODAY for TOMORROW’S PRODUCTS</div>
+							<div id="header-text">3665 SW Deschutes Street<br>Corvallis, Oregon 97333-9285<br>Ph: (541) 753-0607<br>Fax: (541) 753-0610<br><a href="mailto:info@pmiclab.com">info@pmiclab.com</a></div>
 						</div>
-					</div>
-					<div class="row justify-content-center">
 						<div class="col-md-2 align-self-center d-none d-md-block">
-							<?php echo wp_get_attachment_image('217', 'full', false, array("class" => "img-fluid")); ?>
-						</div>
-						<div class="col-12 col-md-10 align-self-center">
-							<div id="header-text">3665 SW Deschutes Street • Corvallis, Oregon 97333-9285 • Ph: (541) 753-0607 • Fax: (541) 753-0610</div>
+							<img src="<?php echo home_url('/wp-content/themes/pmiclab/assets/img/logo-ias.jpg'); ?>" class="img-fluid" />
 						</div>
 					</div>
 				</div>

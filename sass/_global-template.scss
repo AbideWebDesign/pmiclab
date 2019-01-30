@@ -77,25 +77,26 @@ body ol, body ul, body dl {
 	z-index: 1000;
 	width: 100%;
 }
+#header-sub, #header-text {
+    font-size: $font-size-sm;  
+    line-height: 1.4em;	
+}
 #header-sub {
-	background: url(assets/img/lines.png) bottom repeat-x;
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 1;
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-    text-align: center;
-    text-transform: uppercase;
+	font-weight: 500;
+	color: $brand-blue;
+	font-style: italic;
 }
 #header-text {
-	font-size: $font-size-sm;
+	
+	a {
+		color: $brand-blue;
+	}
 }
 #nav-main {
 	background-color: #333;	
-	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,.4);
-    -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,.4);
-    box-shadow: 0 8px 6px -6px rgba(0,0,0,.4);
+	-webkit-box-shadow: $box-shadow-bottom;
+    -moz-box-shadow: $box-shadow-bottom;
+    box-shadow: $box-shadow-bottom;
 	position: relative;
 	
 	a {
@@ -129,7 +130,7 @@ body ol, body ul, body dl {
     }
 }
 .dropdown-menu {
-	box-shadow: 0 2px 15px 0 rgba(0,0,0,.15);
+	box-shadow: 0 2px 15px 0 rgba(0,0,0,.35);
     padding: 0;
     background-color: #333;
     margin: 0;
@@ -151,7 +152,7 @@ body ol, body ul, body dl {
 ** Component: Content Area
 */
 .container-shadow {
-	box-shadow: 0 2px 15px 0 rgba(0,0,0,.15);
+	box-shadow: $box-shadow-sides;
 }
 #content-area {
 	background: url(assets/img/pattern.jpg) top repeat;
@@ -198,7 +199,7 @@ body ol, body ul, body dl {
 */
 #subnav {
 	height: 42px;
-	
+	box-shadow: 0 1px 5px 1px rgba(0,0,0,0.2);
 	a {
 		color: white;
 		font-weight: normal;
@@ -275,9 +276,9 @@ body ol, body ul, body dl {
 ** Component: Footer
 */
 #footer {
-	-webkit-box-shadow: 0 -7px 6px -6px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0 -7px 6px -6px rgba(0,0,0,0.4);
-    box-shadow: 0 -7px 6px -6px rgba(0,0,0,0.4);
+	-webkit-box-shadow: $box-shadow-top;
+    -moz-box-shadow: $box-shadow-top;
+    box-shadow: $box-shadow-top;
     
 	p, a {
 		color: white;
