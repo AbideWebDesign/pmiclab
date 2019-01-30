@@ -83,7 +83,7 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-sm-4 col-md-4 col-lg-6 text-center text-lg-left align-self-center">
-					<a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image('210', 'full', false, array("class" => "img-fluid")); ?></a>
+					<a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image('210', 'full', false, array("class" => "img-fluid", "style" => "width: 250px")); ?></a>
 				</div>
 				<div class="col-12 col-sm-8 col-md-8 col-lg-6 d-none d-sm-block">
 					<div class="row">
