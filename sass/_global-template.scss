@@ -562,9 +562,15 @@ body {
 			ul {
 				padding: 1.2em;
 			}
-			ul:first-child {
-			    background-color: #ccc;
-				margin-right: .5em;
+			.gform_fields {
+				padding: 0;
+				
+				li:first-child {
+					ul {
+					    background-color: #ccc;
+						margin-right: .5em;
+					}
+				}
 			}
 			.top_label {
 				.gfield_label {
