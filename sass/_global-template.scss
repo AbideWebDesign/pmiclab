@@ -453,6 +453,27 @@ body ol, body ul, body dl {
 */
 body {
 	.gform_wrapper {
+		.gform_title {
+			@extend h2;
+		}
+		.gf_page_steps {
+			background-color: $brand-blue;
+			color: white;
+	    	border: none;
+	    	margin: 0 0 40px;
+			padding: 0 0 0 20px;
+		}
+		.gf_step {
+			font-size: 1.1rem;
+			font-weight: normal;
+			height: auto;
+		}
+		.gf_step span.gf_step_number {
+			font-size: 1em;
+		}
+		&.gf_browser_chrome .gfield_checkbox li input, &.gf_browser_chrome .gfield_checkbox li input[type=checkbox], &.gf_browser_chrome .gfield_radio li input[type=radio] {
+			margin-top: 0;
+		}
 		.gform_body {
 			ul {
 				margin-bottom: 0;
@@ -469,28 +490,7 @@ body {
 					width: 100%;
 				}
 			}
-			.gform_title {
-				@extend h2;
-			}
-			.gf_page_steps {
-				background-color: $brand-blue;
-				color: white;
-		    	border: none;
-		    	margin: 0 0 40px;
-				padding: 0 0 0 20px;
-			}
-			.gf_step {
-				font-size: 1.1rem;
-				font-weight: normal;
-				height: auto;
-			}
-			.gf_step span.gf_step_number {
-				font-size: 1em;
-			}
-			&.gf_browser_chrome .gfield_checkbox li input, &.gf_browser_chrome .gfield_checkbox li input[type=checkbox], &.gf_browser_chrome .gfield_radio li input[type=radio] {
-				margin-top: 0;
-			}
-			.field_description_below .gfield_description {
+						.field_description_below .gfield_description {
 				padding-top: 5px;
 			}
 			.field_description_below .gfield_description, .field_sublabel_above .ginput_complex.ginput_container label, .field_sublabel_above div[class*=gfield_date_].ginput_container label, .field_sublabel_above div[class*=gfield_time_].ginput_container label, .field_sublabel_below .ginput_complex.ginput_container label, .field_sublabel_below div[class*=gfield_date_].ginput_container label, .field_sublabel_below div[class*=gfield_time_].ginput_container label {
