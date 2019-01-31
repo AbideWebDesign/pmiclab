@@ -540,17 +540,14 @@ body {
 						}
 					}
 				}
-				.gpnf-add-entry {
+				.gpnf-add-entry, .gpnf-add-entry:hover  {
 					@extend .btn;
 					padding: .6em .95em;
 					margin-top: 0;
 				    font-size: .8em;
-				    background-color: #666;
-				    border-color: #666;
-				}
-				.gpnf-add-entry:hover {
-					background-color: #999;
-					border-color: #999;
+				    background-color: #999;
+				    border-color: #999;
+				    color: white;
 				}
 			}
 		}
@@ -572,6 +569,8 @@ body {
 			
 			h3 {
 				margin-bottom: 0;
+				color: #555;
+				font-weight: bold;
 			}
 			ul {
 				padding: 1.2em;
@@ -598,6 +597,9 @@ body {
 					font-size: .85rem;
 				}
 			}
+			.gform_fields.top_label.form_sublabel_below.description_below {
+				margin-top: -5px !important;
+			}
 			table.gfield_list thead th {
 				font-size: .85rem;
 			}
@@ -607,6 +609,10 @@ body {
 			.gform_footer {
 				padding: 0;
 				margin: 0;
+				
+				input[type=submit] {
+					margin-right: 0;
+				}
 			}
 			.add_list_item  {
 				width: 15px;
