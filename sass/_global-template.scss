@@ -522,6 +522,13 @@ body {
 			ul.gfield_checkbox li input[type=checkbox]:checked+label {
 				font-weight: normal;
 			}
+			.top_label input.medium {
+				@extend .btn;
+				@extend .btn-secondary;
+			}
+			.ginput_container_fileupload {
+				font-size: .95em;	
+			}
 			.gpnf-nested-entries-container {
 				@extend .table-responsive;
 				
@@ -536,7 +543,16 @@ body {
 						@extend .thead-light;
 						
 						th {
-							font-size: .8em;
+							font-size: .95em;
+						}
+					}
+					tbody {
+						font-size: 1rem;
+						font-weight: normal;
+					}
+					.gpnf-row-actions {
+						a {
+							color: $brand-blue;
 						}
 					}
 				}
@@ -544,7 +560,7 @@ body {
 					@extend .btn;
 					padding: .6em .95em;
 					margin-top: 0;
-				    font-size: .8em;
+				    font-size: .95em;
 				    background-color: #999;
 				    border-color: #999;
 				    color: white;
