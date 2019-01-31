@@ -449,62 +449,77 @@ body ol, body ul, body dl {
 	font-weight: bold;
 }
 /*
-** Form specific styles
+** Form Overrides
 */
 body {
-	.gform_wrapper .gf_step {
-		font-size: 1.3rem;
-		font-weight: normal;
-		height: auto;
-	}
-	.gform_wrapper .gf_step span.gf_step_number {
-		font-size: 1em;
-	}
-	.gform_wrapper.gf_browser_chrome .gfield_checkbox li input, .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
-		margin-top: 0;
-	}
-	.gform_wrapper .field_description_below .gfield_description {
-		padding-top: 5px;
-	}
-	.gform_wrapper .field_description_below .gfield_description, .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label, .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
-		font-weight: 500;
-		font-size: .813em;
-	    letter-spacing: .5pt;
-	    white-space: nowrap;
-	    color: $gray-600;
-	}
-	.gform_wrapper .gfield_checkbox li label {
-		font-weight: 500;
-		padding-left: 7px;
-	}
-}
-#gform_1 {
-	.gform_body {
-		
-		ul {
-			margin-bottom: 0;
-		}
-		.ginput_container_email {
-			width: 100%;
-			
-			input {
-				border-right: none;
+	.gform_wrapper {
+		.gform_body {
+			ul {
+				margin-bottom: 0;
+				
+				li.gfield {
+					padding-top: 0;
+				}
+			}
+			.ginput_container_email {
 				width: 100%;
+				
+				input {
+					border-right: none;
+					width: 100%;
+				}
+			}
+			.gform_title {
+				@extend h2;
+			}
+			.gf_page_steps {
+				background-color: $brand-blue;
+				color: white;
+		    	border: none;
+		    	margin: 0 0 40px;
+				padding: 0 0 0 20px;
+			}
+			.gf_step {
+				font-size: 1.1rem;
+				font-weight: normal;
+				height: auto;
+			}
+			.gf_step span.gf_step_number {
+				font-size: 1em;
+			}
+			.gf_browser_chrome .gfield_checkbox li input, .gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gf_browser_chrome .gfield_radio li input[type=radio] {
+				margin-top: 0;
+			}
+			.field_description_below .gfield_description {
+				padding-top: 5px;
+			}
+			.field_description_below .gfield_description, .field_sublabel_above .ginput_complex.ginput_container label, .field_sublabel_above div[class*=gfield_date_].ginput_container label, .field_sublabel_above div[class*=gfield_time_].ginput_container label, .field_sublabel_below .ginput_complex.ginput_container label, .field_sublabel_below div[class*=gfield_date_].ginput_container label, .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+				font-weight: 500;
+				font-size: .813em;
+			    letter-spacing: .5pt;
+			    white-space: nowrap;
+			    color: $gray-600;
+			}
+			.gfield_checkbox li label {
+				font-weight: 500;
+				padding-left: 7px;
 			}
 		}
+		.gform_footer{
+			.button {
+				@extend .btn-sm;
+				@extend .btn-block;
+				padding: 0.7rem .5rem;
+			}	
+		}
 	}
-	.gform_footer{
-		
-		.button {
-			@extend .btn-sm;
-			@extend .btn-block;
-			padding: 0.7rem .5rem;
-		}	
-	}
-
 }
 @media only screen and (min-width: 641px) {
-	.gform_wrapper .gf_step {
-		margin: 16px 32px 3px 0;		
+	body {
+		.gform_wrapper {
+			.gf_step {
+				margin: 16px 32px 3px 0;		
+			}
+		}
 	}
 }
