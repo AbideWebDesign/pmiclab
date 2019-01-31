@@ -448,9 +448,33 @@ body ol, body ul, body dl {
 /*
 ** Form specific styles
 */
+.gform_wrapper .gf_step {
+	font-weight: 1.3rem;
+	font-weight: normal;
+	height: auto;
+}
+.gform_wrapper .gf_step span.gf_step_number {
+	font-size: 1em;
+}
+.gform_wrapper.gf_browser_chrome .gfield_checkbox li input, .gform_wrapper.gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gform_wrapper.gf_browser_chrome .gfield_radio li input[type=radio] {
+	margin-top: 0;
+}
+.gform_wrapper .field_description_below .gfield_description {
+	padding-top: 5px;
+}
+.gform_wrapper .field_description_below .gfield_description, .gform_wrapper .field_sublabel_above .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_above div[class*=gfield_time_].ginput_container label, .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_date_].ginput_container label, .gform_wrapper .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+	font-weight: 500;
+	font-size: .813em;
+    letter-spacing: .5pt;
+    white-space: nowrap;
+    color: $gray-600;
+}
+.gform_wrapper .gfield_checkbox li label {
+	font-weight: 500;
+	padding-left: 7px;
+}
 #gform_1 {
 	.gform_body {
-		width: 77%;
 		
 		ul {
 			margin-bottom: 0;
@@ -465,12 +489,17 @@ body ol, body ul, body dl {
 		}
 	}
 	.gform_footer{
-		width: 23%;
 		
 		.button {
 			@extend .btn-sm;
 			@extend .btn-block;
 			padding: 0.7rem .5rem;
 		}	
+	}
+
+}
+@media only screen and (min-width: 641px) {
+	.gform_wrapper .gf_step {
+		margin: 16px 32px 3px 0;		
 	}
 }
