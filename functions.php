@@ -73,6 +73,7 @@ add_action( 'after_setup_theme', 'pmiclab_setup' );
  * Enqueue scripts and styles.
  */
 function pmiclab_scripts() {
+	$theme = wp_get_theme();
 		
 	wp_deregister_script( 'jquery' );
 	
@@ -86,7 +87,7 @@ function pmiclab_scripts() {
 	
 	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
 
-	wp_enqueue_style( 'pmiclab-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'pmiclab-style', get_stylesheet_uri(), '', $theme->version, true );
 	
 	wp_enqueue_style( 'pmiclab-style', 'https://fonts.googleapis.com/css?family=Montserrat:400,600' );
 	
