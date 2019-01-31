@@ -487,7 +487,7 @@ body {
 			.gf_step span.gf_step_number {
 				font-size: 1em;
 			}
-			.gf_browser_chrome .gfield_checkbox li input, .gf_browser_chrome .gfield_checkbox li input[type=checkbox], .gf_browser_chrome .gfield_radio li input[type=radio] {
+			&.gf_browser_chrome .gfield_checkbox li input, &.gf_browser_chrome .gfield_checkbox li input[type=checkbox], &.gf_browser_chrome .gfield_radio li input[type=radio] {
 				margin-top: 0;
 			}
 			.field_description_below .gfield_description {
