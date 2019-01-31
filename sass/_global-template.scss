@@ -39,7 +39,7 @@ a:hover{
 }
 .btn {
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: 400;
 	padding: .675rem 1.6rem;
 }
 .btn-lg {
@@ -453,8 +453,11 @@ body ol, body ul, body dl {
 */
 body {
 	.gform_wrapper {
-		.gform_title {
-			@extend h2;
+		h3.gform_title {
+			font-size: 2.0rem;
+		}
+		h2.gsection_title {
+			font-size: 1.25em;
 		}
 		.gf_page_steps {
 			background-color: $brand-blue;
@@ -475,11 +478,20 @@ body {
 			margin-top: 0;
 		}
 		.gform_body {
+			.gfmc-column {
+				margin-bottom: 0;
+			}
 			ul {
 				margin-bottom: 0;
 				
 				li.gfield {
 					padding-top: 0;
+				}
+			}
+			.top_label {
+				.gfield_label {
+					font-size: .92rem;
+					margin: 0;
 				}
 			}
 			.ginput_container_email {
@@ -490,7 +502,7 @@ body {
 					width: 100%;
 				}
 			}
-						.field_description_below .gfield_description {
+			.field_description_below .gfield_description {
 				padding-top: 5px;
 			}
 			.field_description_below .gfield_description, .field_sublabel_above .ginput_complex.ginput_container label, .field_sublabel_above div[class*=gfield_date_].ginput_container label, .field_sublabel_above div[class*=gfield_time_].ginput_container label, .field_sublabel_below .ginput_complex.ginput_container label, .field_sublabel_below div[class*=gfield_date_].ginput_container label, .field_sublabel_below div[class*=gfield_time_].ginput_container label {
@@ -501,8 +513,14 @@ body {
 			    color: $gray-600;
 			}
 			.gfield_checkbox li label {
-				font-weight: 500;
+				font-weight: normal;
 				padding-left: 7px;
+			}
+			li.gfield.field_description_below+li.gsection {
+				margin-top: 5px !important;
+			}
+			ul.gfield_checkbox li input[type=checkbox]:checked+label {
+				font-weight: normal;
 			}
 		}
 		.gform_footer{
@@ -517,8 +535,11 @@ body {
 @media only screen and (min-width: 641px) {
 	body {
 		.gform_wrapper {
-			.gf_step {
-				margin: 16px 32px 3px 0;		
+			.gsection {
+				margin: 10px 16px 10px 0;
+			}
+			.top_label li.gfield.gf_right_third+li.gsection {
+				padding: 5px 0 5px;
 			}
 		}
 	}
