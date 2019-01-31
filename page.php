@@ -49,7 +49,7 @@ get_header();
 						
 						<?php endwhile; ?>
 						
-						<?php if (get_field('list_group_title')): ?>
+						<?php if (get_field('include_list_group')): ?>
 			
 							<?php get_template_part('template-parts/block', 'list-group'); ?>
 			
