@@ -41,7 +41,7 @@ get_header();
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="<?php echo (get_field('include_sidebar') ? 'col-lg-9' : 'col-12'); ?>">
 						
 						<?php while (have_posts()) : the_post(); ?>
 						
@@ -56,11 +56,17 @@ get_header();
 						<?php endif; ?>
 						
 					</div>
-					<div class="col-lg-3">
+					
+					<?php if (get_field('include_sidebar')): ?>
+					
+						<div class="col-lg-3">
+							
+							<?php get_template_part('template-parts/block', 'sidebar'); ?>
+							
+						</div>
 						
-						<?php get_template_part('template-parts/block', 'sidebar'); ?>
-						
-					</div>
+					<?php endif; ?>
+					
 				</div>
 			</div>
 		</div>
