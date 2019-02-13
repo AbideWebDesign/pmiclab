@@ -396,7 +396,7 @@ body ol, body ul, body dl {
 	    padding: 1em;
 	    font-size: .75em;
 	    line-height: 1.35em;
-	    font-weight: normal;
+	    font-weight: 400;
 	}
 	figure.alignleft, figure.alignright {
 		max-width: 45% !important;
@@ -418,6 +418,11 @@ body ol, body ul, body dl {
 	}
 	.aligncenter {
 		margin: 0 auto 2em auto;
+	}
+	h6 {
+		font-size: .85em;
+	    line-height: 1.5em;
+	    font-weight: 400;
 	}
 }
 @media (max-width: 1200px) {
