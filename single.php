@@ -20,7 +20,7 @@ get_header();
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-9">
+				<div class="col-lg-9 mb-md-1">
 					
 					<?php while (have_posts()) : the_post(); ?>
 					

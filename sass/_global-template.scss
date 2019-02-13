@@ -383,8 +383,84 @@ body ol, body ul, body dl {
 	    margin-right: 6px;
 	}
 }
-
-
+/*
+** Posts
+*/
+#content {
+	figure {
+		
+		img {
+			@extend .img-fluid;
+		}
+	}
+	
+	.wp-caption-text {
+		background-color: #eee;
+	    color: #555;
+	    padding: 1em;
+	    font-size: .75em;
+	    line-height: 1.35em;
+	    font-weight: normal;
+	}
+	.alignleft, .alignright {
+		max-width: 35% !important;
+	}
+	.alignleft {
+		float: left;
+		margin: 0 1em 0 0;
+	}
+	.alignright {
+		float: right;
+		margin: 0 0 0 1em;
+	}
+	.aligncenter {
+		margin: 0 auto 2em auto;
+	}
+}
+@media (max-width: 1200px) {
+	#content {
+		figure.alignleft, figure.alignright {
+			max-width: 30% !important;
+			
+			img {
+				width: 100% !important;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	#content {
+		figure.alignleft, figure.alignright {
+			max-width: 40% !important;
+			
+			img {
+				width: 100% !important;
+			}
+		}
+		figure.aligncenter {
+			max-width: 75%;
+		}
+		.alignleft, .alignright, .aligncenter {
+			margin-bottom: 2em;
+		}
+	}
+}
+@media (max-width: 576px) {
+	#content {
+		figure.alignleft, figure.alignright, figure.aligncenter {
+			max-width: 100% !important;
+			width: 100% !important;
+			
+			img {
+				width: 100% !important;
+			}
+		}
+		.alignleft, .alignright, .aligncenter {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
 /*
 ** Plugin: Gravity Forms
 */
