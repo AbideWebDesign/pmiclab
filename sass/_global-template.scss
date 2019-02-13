@@ -387,13 +387,9 @@ body ol, body ul, body dl {
 ** Posts
 */
 #content {
-	figure {
-		
-		img {
-			@extend .img-fluid;
-		}
+	img {
+		@extend .img-fluid;
 	}
-	
 	.wp-caption-text {
 		background-color: #eee;
 	    color: #555;
@@ -402,8 +398,15 @@ body ol, body ul, body dl {
 	    line-height: 1.35em;
 	    font-weight: normal;
 	}
-	.alignleft, .alignright {
-		max-width: 35% !important;
+	figure.alignleft, figure.alignright {
+		max-width: 45% !important;
+		
+		img {
+			width: 100% !important;
+		}
+	}
+	img.alignleft, img.alignright {
+		max-width: 45% !important;
 	}
 	.alignleft {
 		float: left;
@@ -420,11 +423,14 @@ body ol, body ul, body dl {
 @media (max-width: 1200px) {
 	#content {
 		figure.alignleft, figure.alignright {
-			max-width: 30% !important;
+			max-width: 45% !important;
 			
 			img {
 				width: 100% !important;
 			}
+		}
+		img.alignleft, img.alignright {
+			max-width: 45% !important;
 		}
 	}
 }
@@ -436,6 +442,9 @@ body ol, body ul, body dl {
 			img {
 				width: 100% !important;
 			}
+		}
+		img.alignleft, img.alignright {
+			max-width: 40% !important;
 		}
 		figure.aligncenter {
 			max-width: 75%;
@@ -454,6 +463,10 @@ body ol, body ul, body dl {
 			img {
 				width: 100% !important;
 			}
+		}
+		img.alignleft, img.alignright, img.aligncenter, .img.alignnone {
+			max-width: 100% !important;
+			width: 100% !important;
 		}
 		.alignleft, .alignright, .aligncenter {
 			margin-left: 0;
