@@ -657,11 +657,10 @@ body {
 				}
 				.gpnf-add-entry, .gpnf-add-entry:hover  {
 					@extend .btn;
+					@extend .btn-primary;
 					padding: .6em .95em;
 					margin-top: 0;
 				    font-size: .8em;
-				    background-color: #999;
-				    border-color: #999;
 				    color: white;
 				}
 			}
