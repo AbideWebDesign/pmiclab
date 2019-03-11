@@ -53,6 +53,13 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		jQuery(function ($) {
+			$('td,th,table').removeAttr('style');
+			$('td,th,table').removeAttr('width');
+			$('table').removeAttr('border');
+		});
+	</script>
 	<?php wp_footer(); ?>
 </body>
 </html>
