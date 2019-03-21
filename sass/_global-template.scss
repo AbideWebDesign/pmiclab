@@ -164,21 +164,6 @@ body ol, body ul, body dl {
 	#content {
 		background-color: white;
 		padding: 3em;
-		
-		table {
-			@extend .table;
-			@extend .table-striped;
-			@extend .table-bordered;
-			
-			thead {
-				@extend .thead-dark;
-				
-				td {
-					@extend th;
-					font-weight: 400;
-				}
-			}
-		}
 	}
 }
 .page-template-default {
