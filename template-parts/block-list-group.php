@@ -2,7 +2,7 @@
 <?php $x = 0; ?>
 
 <div class="pt-1">
-	<h3 class="mb-2"><?php the_field('list_group_title'); ?></h3>
+	<h3 class="mb-1"><?php the_field('list_group_title'); ?></h3>
 	
 	<?php if (get_field('list_group_text')): ?>
 		

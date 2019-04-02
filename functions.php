@@ -69,6 +69,25 @@ if ( ! function_exists( 'pmiclab_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'pmiclab_setup' );
 
+/*
+ * Admin bar customizations
+ *
+ */
+function pmiclab_admin_bar_render() {
+	
+    global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('customize');
+    $wp_admin_bar->remove_node('wp-logo');
+    $wp_admin_bar->remove_menu('new-post');
+    $wp_admin_bar->remove_menu('search');
+    $wp_admin_bar->remove_menu('themes');
+    $wp_admin_bar->remove_menu('widgets');
+    $wp_admin_bar->remove_node('updates');
+    $wp_admin_bar->remove_menu('searchwp');
+
+}
+add_action( 'wp_before_admin_bar_render', 'pmiclab_admin_bar_render' );
+
 /**
  * Enqueue scripts and styles.
  */
