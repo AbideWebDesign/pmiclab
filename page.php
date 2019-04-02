@@ -33,13 +33,19 @@ get_header();
 			<?php endif; ?>
 			
 			<div id="content">	
-				<div class="row d-none d-md-block">
-					<div class="col-12 mb-2">
+				
+				<?php if (!is_home()): ?>
 					
-						<?php if(function_exists('bcn_display')) bcn_display(); ?>
-					
+					<div class="row d-none d-md-block">
+						<div class="col-12 mb-2">
+						
+							<?php if(function_exists('bcn_display')) bcn_display(); ?>
+						
+						</div>
 					</div>
-				</div>
+					
+				<?php endif; ?>
+				
 				<div class="row">
 					<div class="<?php echo (get_field('include_sidebar') ? 'col-lg-9' : 'col-12'); ?>">
 						
