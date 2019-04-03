@@ -11,7 +11,7 @@
 
 ?>
 
-	<div id="footer" class="bg-secondary py-3">
+	<div id="footer" class="bg-secondary py-3 d-print-none">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 d-none d-xl-block order-lg-1">
@@ -48,7 +48,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center text-xs">
-					&copy; <?php echo date('Y'); ?> Precision Measurements And Instruments Corporation. <span><a href="https://abidewebdesign.com" target="_blank">Website Design by Abide Web Design</a></span>
+					&copy; <?php echo date('Y'); ?> Precision Measurements And Instruments Corporation. <span class="d-print-none"><a href="https://abidewebdesign.com" target="_blank">Website Design by Abide Web Design</a></span>
 				</div>
 			</div>
 		</div>

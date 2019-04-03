@@ -82,10 +82,10 @@
 	<div id="header" class="py-1">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-12 col-sm-4 col-md-4 col-lg-6 text-center text-lg-left align-self-center">
+				<div id="col-logo" class="col-12 col-sm-4 col-md-4 col-lg-6 text-center text-lg-left align-self-center">
 					<a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image('210', 'full', false, array("class" => "img-fluid", "style" => "width: 250px")); ?></a>
 				</div>
-				<div class="col-12 col-sm-8 col-md-8 col-lg-6 d-none d-sm-block">
+				<div class="col-12 col-sm-8 col-md-8 col-lg-6 d-none d-sm-block d-print-none">
 					<div class="row">
 						<div class="col-12 col-md-10 text-right">
 							<div id="header-sub" class="d-none d-md-block">PRECISION TODAY for TOMORROW’S PRODUCTS</div>
@@ -99,7 +99,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="nav-main" data-toggle="sticky-onscroll">
+	<div id="nav-main" class="d-print-none" data-toggle="sticky-onscroll">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-dark">	
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-primary" aria-controls="menu-primary" aria-expanded="false" aria-label="Toggle navigation">

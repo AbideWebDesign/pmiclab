@@ -69,8 +69,11 @@ body ol, body ul, body dl {
 .text-sm {
 	font-size: $font-size-sm;
 }
-h3 {
+h3, h4 {
 	margin-bottom: 1em;
+}
+h4 {
+	font-size: 1rem;
 }
 p, body ol, body ul, body dl {
 	margin-bottom: 1.2em;
@@ -755,5 +758,32 @@ body {
 @media only screen and (min-width: 641px) {
 	.gpnf-dialog .gform_wrapper ul.gform_fields li.gfield {
 	    padding-right: 0;
+	}
+}
+
+/* Print Styles */
+@media print {
+	body { 
+		background: white; 
+		color: black; 
+		margin: 0; 
+		
+		a {
+			text-decoration: none !important;
+			color: $text-color;
+		}
+	}
+	
+		.row {
+			display: block !important;
+  		}
+  	
+  	
+	.page-template-default {
+		#content-area {
+			#content {
+				padding: 0;		
+			}
+		}
 	}
 }
