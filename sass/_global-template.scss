@@ -69,7 +69,7 @@ body ol, body ul, body dl {
 .text-sm {
 	font-size: $font-size-sm;
 }
-h3, h4 {
+h3, h4, h5 {
 	margin-bottom: 1em;
 }
 h4 {
@@ -770,20 +770,20 @@ body {
 		
 		a {
 			text-decoration: none !important;
-			color: $text-color;
+			color: $text-color !important;
 		}
 	}
-	
-		.row {
-			display: block !important;
-  		}
-  	
-  	
+	.row {
+		display: block !important;
+	}
 	.page-template-default {
 		#content-area {
 			#content {
 				padding: 0;		
 			}
 		}
+	}
+	.footable-filtering {
+		display: none !important;
 	}
 }

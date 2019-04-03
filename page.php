@@ -65,7 +65,7 @@ get_header();
 					
 					<?php if (get_field('include_sidebar')): ?>
 					
-						<div class="col-lg-3">
+						<div class="col-lg-3 d-print-none">
 							
 							<?php get_template_part('template-parts/block', 'sidebar'); ?>
 							
