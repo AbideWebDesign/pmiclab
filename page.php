@@ -37,7 +37,7 @@ get_header();
 				<?php if (!is_front_page()): ?>
 					
 					<div class="row d-none d-md-block d-print-none">
-						<div class="col-12 mb-2">
+						<div class="col-12 mb-2 d-print-none">
 						
 							<?php if(function_exists('bcn_display')) bcn_display(); ?>
 						
