@@ -34,7 +34,7 @@ get_header();
 			
 			<div id="content">	
 				
-				<?php if (!is_home()): ?>
+				<?php if (!is_front_page()): ?>
 					
 					<div class="row d-none d-md-block">
 						<div class="col-12 mb-2">
