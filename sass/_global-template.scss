@@ -789,4 +789,8 @@ body {
 	.footable-header th {
 		color: $text-color !important;
 	}
+	.collapse {
+		display: block !important;
+		height: auto !important;
+	}
 }
