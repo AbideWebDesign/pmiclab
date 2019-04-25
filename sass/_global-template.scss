@@ -767,14 +767,24 @@ body {
 		background: white; 
 		color: black; 
 		margin: 0; 
+		font-size: 12pt !important;
 		
 		a {
 			text-decoration: none !important;
 			color: $text-color !important;
 		}
 	}
-	.row {
+	.row, .col-lg-9 {
 		display: block !important;
+		overflow: visible !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	img {
+		display: block !important;
+		float: none !important;
+		max-width: 100% !important;
+		margin: 0 0 1cm 0 !important;
 	}
 	.page-template-default {
 		#content-area {
@@ -792,5 +802,15 @@ body {
 	.collapse {
 		display: block !important;
 		height: auto !important;
+	}
+	p {
+	  page-break-inside: avoid;
+	}
+	@page {
+		margin: 1cm;
+		font-size: 12pt !important;
+	}
+	@-moz-document url-prefix() { 
+
 	}
 }

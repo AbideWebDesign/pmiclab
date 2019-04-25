@@ -32,9 +32,10 @@
 				<div id="footer-contact" class="col-12 col-md-6 col-lg-4 col-xl-3 order-4 order-lg-3">
 					<h4 class="text-white mb-1">Contact Us</h4>
 					<ul class="list-unstyled m-0">
-						<li>3665 SW DESCHUTES Street<br>Corvallis, OR 97333-9285</li>
-						<li><strong>P:</strong> (541)753-0607</li>
-						<li><strong>F:</strong> (541)753-0610</li>
+						<li>3665 SW Deschutes Street<br>Corvallis, OR 97333-9285</li>
+						<li><strong>Tel:</strong> (541)753-0607</li>
+						<li><strong>Fax:</strong> (541)753-0610</li>
+						<li><a href="mailto:info@pmiclab.com">info@pmiclab.com</a></li>
 					</ul>
 				</div>
 				<div class="col-12 col-md-12 col-lg-4 col-xl-3 align-self-center text-center order-1 order-lg-4 mb-3 mb-lg-0">
@@ -48,7 +49,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 text-center text-xs">
-					&copy; <?php echo date('Y'); ?> Precision Measurements And Instruments Corporation. <span class="d-print-none"><a href="https://abidewebdesign.com" target="_blank">Website Design by Abide Web Design</a></span>
+					Copyright <?php echo date('Y'); ?> Precision Measurements And Instruments Corporation. <span class="d-print-none"><a href="https://abidewebdesign.com" target="_blank">Website Design by Abide Web Design</a></span>
 				</div>
 			</div>
 		</div>
