@@ -19,6 +19,8 @@ a, button, input:focus, input[type="button"], input[type="reset"], input[type="s
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+    color: darken($brand-primary, 10);
+    text-decoration: underline;
 }
 a:hover{
 	color: $brand-primary;
@@ -39,6 +41,7 @@ a:hover{
 }
 .btn {
 	text-transform: uppercase;
+	text-decoration: none;
 	font-weight: 400;
 	padding: .675rem 1.6rem;
 }
@@ -218,6 +221,7 @@ p, body ol, body ul, body dl {
 		height: 42px;
 		line-height: 42px;
 		font-size: $font-size-sm;
+		text-decoration: none;
 	}
 	.list-inline-item {
 		vertical-align: top;
@@ -270,6 +274,7 @@ p, body ol, body ul, body dl {
 	
 	a {
 		color: white;
+		text-decoration: none;
 	}
 	div, li {
 		padding: 1em;
@@ -322,7 +327,10 @@ p, body ol, body ul, body dl {
 	p, a {
 		color: white;
 	}
-	a.text-primary:hover {
+	a {
+		text-decoration: none;
+	}
+	a.text-primary, a.text-primary:hover {
 		color: $brand-primary !important;
 	}
 	h4 {
@@ -337,7 +345,12 @@ p, body ol, body ul, body dl {
 		@extend .list-unstyled;
 	}
 }
-
+#footer-bottom {
+	a {
+		text-decoration: none;
+		color: $brand-primary;
+	}
+}
 /*
 ** Component: Blog List
 */
@@ -347,6 +360,7 @@ p, body ol, body ul, body dl {
     
 	a {
 		color: #333;
+		text-decoration: none;
 	}
 	a:hover {
 		color: $brand-primary;
