@@ -186,9 +186,9 @@ $text-color:            	#333333 !default;
 //
 // Style anchor elements.
 
-$link-color:                theme-color("primary") !default;
+$link-color:                #0066cc !default;
 $link-decoration:           none !default;
-$link-hover-color:          darken($link-color, 15%) !default;
+$link-hover-color:          lighten($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
 
 // Paragraphs

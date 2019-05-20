@@ -16,7 +16,7 @@
 			<div class="row">
 				<div class="col-lg-3 d-none d-xl-block order-lg-1">
 					<h4 class="text-white mb-1">Our Story</h4>
-					<p class="text-sm mb-1 mb-lg-0">PMIC was founded in 1991 in Philomath, Oregon by Dr. Ernest G. Wolff, providing highly accurate thermal expansion measurements using the Michelson laser interferometry. As the importance of understanding thermal expansion characterization of materials became more pronounced, so did the need for PMIC services.  <a class="text-primary" href="<?php echo home_url('/company-information/'); ?>">Learn More</a></p>
+					<p class="text-sm mb-1 mb-lg-0">PMIC was founded in 1991 in Philomath, Oregon by Dr. Ernest G. Wolff, providing highly accurate thermal expansion measurements using the Michelson laser interferometry. As the importance of understanding thermal expansion characterization of materials became more pronounced, so did the need for PMIC services.  <a href="<?php echo home_url('/company-information/'); ?>">Learn More</a></p>
 				</div>
 				
 				<div class="col-12 col-md-6 col-lg-4 col-xl-3 order-2 mb-2 mb-md-0">

@@ -19,11 +19,7 @@ a, button, input:focus, input[type="button"], input[type="reset"], input[type="s
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
-    color: darken($brand-primary, 10);
     text-decoration: underline;
-}
-a:hover{
-	color: $brand-primary;
 }
 :focus, button:focus {
 	outline: none;
@@ -100,12 +96,6 @@ p, body ol, body ul, body dl {
 	font-weight: 500;
 	color: $brand-blue;
 	font-style: italic;
-}
-#header-text {
-	
-	a {
-		color: $brand-blue;
-	}
 }
 #nav-main {
 	background-color: #333;	
@@ -324,11 +314,11 @@ p, body ol, body ul, body dl {
     -moz-box-shadow: $box-shadow-top;
     box-shadow: $box-shadow-top;
     
-	p, a {
+	p, .btn  {
 		color: white;
 	}
 	a {
-		text-decoration: none;
+		color: lighten($brand-primary, 15%);
 	}
 	a.text-primary, a.text-primary:hover {
 		color: $brand-primary !important;
@@ -347,8 +337,7 @@ p, body ol, body ul, body dl {
 }
 #footer-bottom {
 	a {
-		text-decoration: none;
-		color: $brand-primary;
+		color: lighten($brand-primary, 15%);
 	}
 }
 /*
