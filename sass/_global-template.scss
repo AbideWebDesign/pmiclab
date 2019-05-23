@@ -395,6 +395,21 @@ p, body ol, body ul, body dl {
 	    margin-right: 6px;
 	}
 }
+
+/* 
+** Component - Video Media
+*/
+.wp-video {
+	width: 100% !important;
+	
+	.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
+		width: 100% !important;
+	}
+	.wp-video-shortcode video, video.wp-video-shortcode {
+		width: 100% !important;
+	}
+}
+
 /*
 ** Posts
 */
