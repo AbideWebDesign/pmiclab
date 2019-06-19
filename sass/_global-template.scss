@@ -262,6 +262,10 @@ p, body ol, body ul, body dl {
 .featured_news_text {
 	font-size: $font-size-sm;
 	margin-bottom: 0;
+
+	.moretag, .moretag:hover {
+		color: white;
+	}	
 }
 .additional_news {
 	background-color: $gray-600;
