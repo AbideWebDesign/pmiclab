@@ -57,9 +57,3 @@
 	<?php endif; ?>
 
 <?php endif; ?>
-
-<?php if ( is_page(193) ): ?>
-
-	<a href="https://pmiclab.com/gift-card-promotion/"><img src="<?php echo home_url('/wp-content/themes/pmiclab/assets/img/atom.jpg'); ?>" class="img-fluid" /></a>
-
-<?php endif; ?>
