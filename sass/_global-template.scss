@@ -550,8 +550,11 @@ p, body ol, body ul, body dl {
 .gform_wrapper input[type="url"],
 .gform_wrapper select,
 .gform_wrapper textarea,
-.gform_wrapper .chosen-container-multi .chosen-choices {
+body .gform_wrapper .chosen-container-multi .chosen-choices {
 	@extend .form-control;
+}
+body .gform_wrapper .chosen-container-multi .chosen-choices {
+	background-image: none;
 }
 .gform_wrapper .button {
 	@extend .btn;
