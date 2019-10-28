@@ -623,6 +623,9 @@ body {
 					padding-top: 0;
 				}
 			}
+			select {
+				font-size: .85em;
+			}
 			.top_label {
 				.gfield_label {
 					font-size: .92rem;
@@ -683,7 +686,7 @@ body {
 						}
 					}
 					tbody {
-						font-size: 1rem;
+						font-size: .85em;
 						font-weight: normal;
 					}
 					.gpnf-row-actions {
@@ -697,7 +700,7 @@ body {
 					@extend .btn-primary;
 					padding: .6em .95em;
 					margin-top: 0;
-				    font-size: .8em;
+				    font-size: .85em;
 				    color: white;
 				}
 			}
