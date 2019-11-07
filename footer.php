@@ -33,7 +33,7 @@
 					<h4 class="text-white mb-1">Contact Us</h4>
 					<ul class="list-unstyled m-0">
 						<li>3665 SW Deschutes Street<br>Corvallis, OR 97333-9285</li>
-						<li><strong>Tel:</strong> (541) 753-0607</li>
+						<li><strong>Tel:</strong> <a class="link" href="tel:5417530607">(541) 753-0607</a></li>
 						<li><strong>Fax:</strong> (541) 753-0610</li>
 						<li><a href="mailto:info@pmiclab.com">info@pmiclab.com</a></li>
 					</ul>

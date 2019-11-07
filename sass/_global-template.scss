@@ -21,6 +21,15 @@ a {
     -webkit-text-decoration-skip: objects;
     text-decoration: underline;
 }
+.link {
+	color: $text-color;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: none;
+		color: $text-color;
+	}
+}
 :focus, button:focus {
 	outline: none;
 }
@@ -322,7 +331,7 @@ p, body ol, body ul, body dl {
     -moz-box-shadow: $box-shadow-top;
     box-shadow: $box-shadow-top;
     
-	p, .btn  {
+	p, .btn, .link, .link:hover  {
 		color: white;
 	}
 	a {
