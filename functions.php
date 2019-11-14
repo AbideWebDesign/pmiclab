@@ -108,9 +108,6 @@ function pmiclab_scripts() {
 
 	wp_enqueue_style( 'pmiclab-style', get_stylesheet_uri(), '', $theme->version );
 	
-	wp_enqueue_style( 'pmiclab-style', 'https://fonts.googleapis.com/css?family=Montserrat:400,600' );
-	
-	wp_enqueue_style( 'pmiclab-style', 'https://fonts.googleapis.com/css?family=Arvo:400,700' );
 }
 add_action( 'wp_enqueue_scripts', 'pmiclab_scripts' );
 
