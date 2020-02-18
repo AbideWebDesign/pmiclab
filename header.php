@@ -107,7 +107,7 @@
 				<div class="col-12 col-sm-8 col-md-8 col-lg-6 d-none d-sm-block d-print-none">
 					<div class="row">
 						<div class="col-12 col-md-10 text-right">
-							<div id="header-sub" class="d-none d-md-block">PRECISION MEASUREMENTS TODAY for TOMORROW’S PRODUCTS</div>
+							<div id="header-sub" class="d-none d-md-block">PRECISION TODAY for TOMORROW’S PRODUCTS</div>
 							<div id="header-text">3665 SW Deschutes Street<br>Corvallis, Oregon 97333-9285<br>Tel: <a class="link" href="tel:5417530607">(541) 753-0607</a><br>Fax: (541) 753-0610<br><a href="mailto:info@pmiclab.com">info@pmiclab.com</a></div>
 						</div>
 						<div class="col-md-2 align-self-center d-none d-md-block">
