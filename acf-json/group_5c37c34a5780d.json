@@ -4,22 +4,25 @@
     "fields": [
         {
             "key": "field_5c37c3e4fe80c",
-            "label": "Hero Banner Image",
+            "label": "Hero Banner Images",
             "name": "hero_banner_image",
-            "type": "image",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "preview_size": "hero banner",
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
             "library": "all",
-            "min_width": 1600,
-            "min_height": 150,
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
             "max_width": "",
             "max_height": "",
@@ -44,5 +47,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548953358
+    "modified": 1584460652
 }
