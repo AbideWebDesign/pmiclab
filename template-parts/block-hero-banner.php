@@ -1,10 +1,11 @@
+
 <?php $images = get_field('hero_banner_image'); ?>
 
 <?php if ( $images ): ?>
 
 	<?php $x = 0; ?>
 	
-	<div id="hero-carousel" class="carousel slide" data-ride="carousel">
+	<div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
 		
 	  <div class="carousel-inner">
 	    
