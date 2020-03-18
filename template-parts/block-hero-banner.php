@@ -5,7 +5,7 @@
 
 	<?php $x = 0; ?>
 	
-	<div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+	<div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
 		
 	  <div class="carousel-inner">
 	    
