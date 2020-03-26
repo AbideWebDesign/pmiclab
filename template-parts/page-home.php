@@ -27,12 +27,10 @@
 	<div id="home-services" class="row my-2">
 		
 		<?php while ( have_rows('services') ): the_row(); ?>
-		
-			<?php $page = get_sub_field('page'); ?>
-			
+					
 			<div class="col-sm-6 col-xl-4 mb-1">
 
-				<a href="<?php echo $page->guid; ?>"><i class="fa fa-chevron-right fa-xs"></i> <?php the_sub_field('title'); ?></a>
+				<a href="<?php the_sub_field('page'); ?>"><i class="fa fa-chevron-right fa-xs"></i> <?php the_sub_field('title'); ?></a>
 				
 			</div>
 		
@@ -42,4 +40,8 @@
 	
 <?php endif; ?>
 
-<?php the_field('footer_text'); ?>
+<div class="border-top pt-2 text-sm">
+	
+	<?php the_field('footer_text'); ?>
+	
+</div>

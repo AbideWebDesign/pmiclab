@@ -167,7 +167,7 @@
                     "key": "field_5e7cec419981d",
                     "label": "Page",
                     "name": "page",
-                    "type": "post_object",
+                    "type": "page_link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -181,9 +181,8 @@
                     ],
                     "taxonomy": "",
                     "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
+                    "allow_archives": 0,
+                    "multiple": 0
                 }
             ]
         },
@@ -226,5 +225,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1585247290
+    "modified": 1585248112
 }
