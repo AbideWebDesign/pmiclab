@@ -10,7 +10,7 @@
 		
 			<div class="col-6 col-md-4 col-lg-3">
 				
-				<a href="<?php the_sub_field('page_link'); ?>"><?php echo wp_get_attachment_image( get_sub_field('image'), 'full', false, array('class'=>'img-fluid') ); ?></a>
+				<a href="<?php the_sub_field('page_link'); ?>"><?php echo wp_get_attachment_image( get_sub_field('image'), 'Medium', false, array('class'=>'img-fluid') ); ?></a>
 				
 			</div>
 		
