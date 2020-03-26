@@ -866,6 +866,24 @@ body {
 	color: #333;
 	font-weight: bold;
 }
+/* Ninja */
+body {
+	.ninja_table_wrapper {
+		font-size: $font-size-sm;
+	}
+	.table_description {
+		margin-bottom: 1em;
+	}
+	.tableFloatingHeaderOriginal {
+		background: white;
+	}
+}
+body table>tbody>tr>td>span.footable-toggle {
+	opacity: 1;
+}
+body .foo-table tbody tr.footable-detail-row td table.footable-details:not(.ninja_custom_color) tbody tr:nth-child(2n) {
+	background-color: inherit;
+}
 /* Popup */
 body .pum-theme-lightbox {
 	.pum-content {
