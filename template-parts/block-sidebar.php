@@ -16,10 +16,10 @@
 	
 	<div class="row d-lg-none d-xl-none no-gutters">
 		
-		<div class="col-md-3 align-self-stretch d-none d-md-block" style="background-size: cover; background-position: center center; background: url(<?php echo $img_src[0]; ?>)">
+		<div class="col-lg-3 align-self-stretch d-none d-md-block" style="background-size: cover; background-position: center center; background: url(<?php echo $img_src[0]; ?>)">
 			<a href="<?php the_permalink($_post->ID); ?>" class="d-block h-100 w-100"></a>
 		</div>
-		<div class="col-md-9 bg-blue featured_news	p-1">
+		<div class="col-lg-9 bg-blue featured_news	p-1">
 			<h3 class="mb-1 text-white"><a href="<?php the_permalink($_post->ID); ?>"><?php echo get_the_title($_post->ID); ?></a></h3>
 			<div class="featured_news_text"><?php echo get_the_excerpt($_post->ID); ?></div>
 		</div>

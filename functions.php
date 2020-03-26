@@ -112,6 +112,18 @@ function pmiclab_scripts() {
 add_action( 'wp_enqueue_scripts', 'pmiclab_scripts' );
 
 /**
+ * Custom admin styles
+ */
+add_action('admin_head', 'pmiclab_admin_styles');
+
+function pmiclab_admin_styles() {
+  echo '<style>
+    .el-alert--error {
+	    display: none;
+  </style>';
+}
+
+/**
  * Image sizes
  */
 set_post_thumbnail_size(200, 200, true);

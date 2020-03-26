@@ -860,7 +860,12 @@ body {
 
 	}
 }
-
+/* Home Page */
+#home-services a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
 /* Popup */
 body .pum-theme-lightbox {
 	.pum-content {
