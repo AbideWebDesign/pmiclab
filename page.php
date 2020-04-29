@@ -59,6 +59,10 @@ get_header();
 							<?php if ( is_front_page() ): ?>
 								
 								<?php get_template_part('template-parts/page', 'home'); ?>
+							
+							<?php elseif ( is_page( 'industries' ) ): ?>
+								
+								<?php get_template_part('template-parts/page', 'industries'); ?>
 								
 							<?php else: ?>
 							
