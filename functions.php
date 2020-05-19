@@ -236,8 +236,6 @@ function new_excerpt_more($more) {
     if ( is_archive() ) {
     	
     	global $post;
-	
-		return '... <a class="moretag" href="'. get_permalink($post->ID) . '">Read the full article</a>';
 		
 	} else {
 		
@@ -252,6 +250,8 @@ add_filter('excerpt_more', 'new_excerpt_more');
  * Plugin: Gravity Form
  */
 function spinner_url($image_src, $form) {
-    return "";
+
+	return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+
 }
 add_filter("gform_ajax_spinner_url_1", "spinner_url", 10, 2);

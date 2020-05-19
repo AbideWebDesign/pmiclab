@@ -182,6 +182,13 @@ class bs4Navwalker extends Walker_Nav_Menu
         $item_output .= '<a'. $attributes .'>';
         /** This filter is documented in wp-includes/post-template.php */
         $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+        
+        if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
+		
+			$item_output .= ' <i class="fa fa-caret-down" aria-hidden="true"></i>';
+
+		}
+		
         $item_output .= '</a>';
         $item_output .= $args->after;
 
