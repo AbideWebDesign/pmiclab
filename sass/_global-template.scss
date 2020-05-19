@@ -152,6 +152,10 @@ p, body ol, body ul, body dl {
 		    color: #333;
 	    }
     }
+    .dropdown-item {
+	    font-weight: normal;
+	    padding: 12px 20px;
+    }
 }
 .dropdown-menu {
 	box-shadow: 0 2px 15px 0 rgba(0,0,0,.35);

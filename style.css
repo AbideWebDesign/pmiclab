@@ -4,7 +4,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of PMIC Lab.
-Version: 1.6.1
+Version: 1.6.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: pmiclab
@@ -7355,6 +7355,9 @@ p, body ol, body ul, body dl, body ol, body ul, body dl {
     background-color: #d3af1d; }
     #nav-main .current-menu-parent > a {
       color: #333; }
+  #nav-main .dropdown-item {
+    font-weight: normal;
+    padding: 12px 20px; }
 
 .dropdown-menu {
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.35);
