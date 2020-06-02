@@ -97,7 +97,7 @@ p, body ol, body ul, body dl {
 	text-decoration: underline;
 }
 .wp-caption {
-	@extend .w-100;
+	max-width: 100%;
 }
 /*
 ** Componant: Global Header
