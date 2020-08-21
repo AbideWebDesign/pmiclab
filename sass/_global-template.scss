@@ -99,6 +99,11 @@ p, body ol, body ul, body dl {
 .wp-caption {
 	max-width: 100%;
 }
+@include media-breakpoint-down(sm) {
+	.wp-caption {
+		width: 100%;
+	}
+}
 /*
 ** Componant: Global Header
 */
@@ -177,6 +182,18 @@ p, body ol, body ul, body dl {
 	    background-color: $brand-primary;
 	    color: white;
     }
+}
+.navbar {
+	.ubermenu-skin-black-silver {
+		border: none;
+		background: none;
+		box-shadow: none;
+	}
+}
+.ubermenu-mobile-view {
+	.ubermenu-item-level-2 {
+		padding-left: 2em !important;
+	}
 }
 
 /*

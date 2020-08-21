@@ -33,32 +33,6 @@
 	<script type="text/javascript">
 		jQuery(function ($) {
 			
-			<?php if ( !wp_is_mobile() ): ?>
-
-				// Override Bootstrap dropdown behavior
-				$( '#menu-primary .dropdown > a' ).click( function() {
-					
-					location.href = $(this).attr('href');
-				
-				});
-				
-				function toggleDropdown (e) {
-					let _d = $(e.target).closest('.dropdown'),
-					 _m = $('.dropdown-menu', _d);
-					
-					setTimeout(function(){
-						let shouldOpen = e.type !== 'click' && _d.is(':hover');
-						_m.toggleClass('show', shouldOpen);
-						_d.toggleClass('show', shouldOpen);
-						$('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-					}, e.type === 'mouseleave' ? 50 : 0);
-				}
-	
-				$( 'body' )
-					.on( 'mouseenter mouseleave','.dropdown',toggleDropdown )
-					.on( 'click', '.dropdown-menu a', toggleDropdown );
-			
-			<?php endif; ?>
 			
 			// Sticky navbar
 			// =========================
@@ -121,9 +95,6 @@
 	<div id="nav-main" class="d-print-none" data-toggle="sticky-onscroll">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-dark">	
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-primary" aria-controls="menu-primary" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span> <span class="d-inline-block align-middle">Menu</span>
-				</button>
 				<?php 
 					wp_nav_menu( array( 
 						'theme_location' => 'menu-1', 

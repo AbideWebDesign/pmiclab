@@ -4,7 +4,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of PMIC Lab.
-Version: 1.6.4
+Version: 1.6.5
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: pmiclab
@@ -380,7 +380,7 @@ mark,
   padding: 0.2em;
   background-color: #fcf8e3; }
 
-.list-unstyled, #footer #menu-footer-menu, .gform_wrapper ul {
+.list-unstyled, .gform_wrapper ul, #footer #menu-footer-menu {
   padding-left: 0;
   list-style: none; }
 
@@ -480,7 +480,6 @@ pre {
   @media (min-width: 1200px) {
     .container {
       max-width: 1300px; } }
-
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -502,12 +501,12 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
-.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
-.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
-.col-xl-auto {
+.col-xl,
+.col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg,
+.col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
+.col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
+.col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col,
+.col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -1265,7 +1264,7 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-nested-entr
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
-  .table-responsive > .table-bordered, body .gform_wrapper .gform_body .gpnf-nested-entries-container > .table-bordered, body .gform_wrapper .gform_body .gpnf-nested-entries-container .table-responsive > .gpnf-nested-entries, body .gform_wrapper .gform_body .gpnf-nested-entries-container > .gpnf-nested-entries {
+  .table-responsive > .table-bordered, body .gform_wrapper .gform_body .gpnf-nested-entries-container .table-responsive > .gpnf-nested-entries, body .gform_wrapper .gform_body .gpnf-nested-entries-container > .table-bordered, body .gform_wrapper .gform_body .gpnf-nested-entries-container > .gpnf-nested-entries {
     border: 0; }
 
 .form-control, .gform_wrapper input[type="email"],
@@ -1405,9 +1404,7 @@ body .gform_wrapper .chosen-container-multi .chosen-choices {
     background-color: #e9ecef;
     opacity: 1; }
 
-select.form-control:focus::-ms-value,
-.gform_wrapper select:focus::-ms-value,
-body .gform_wrapper .chosen-container-multi select.chosen-choices:focus::-ms-value {
+select.form-control:focus::-ms-value {
   color: #495057;
   background-color: #fff; }
 
@@ -1464,16 +1461,10 @@ body .gform_wrapper .chosen-container-multi select.chosen-choices:focus::-ms-val
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-select.form-control[size],
-.gform_wrapper select[size],
-body .gform_wrapper .chosen-container-multi select.chosen-choices[size], select.form-control[multiple],
-.gform_wrapper select[multiple],
-body .gform_wrapper .chosen-container-multi select.chosen-choices[multiple] {
+select.form-control[size], select.form-control[multiple] {
   height: auto; }
 
-textarea.form-control,
-.gform_wrapper textarea,
-body .gform_wrapper .chosen-container-multi textarea.chosen-choices {
+textarea.form-control {
   height: auto; }
 
 .form-group, .gform_wrapper li {
@@ -1541,21 +1532,36 @@ body .gform_wrapper .chosen-container-multi textarea.chosen-choices {
   border-radius: 0.25rem; }
 
 .was-validated .form-control:valid, .was-validated .gform_wrapper input[type="email"]:valid, .gform_wrapper .was-validated input[type="email"]:valid,
-.was-validated .gform_wrapper input[type="date"]:valid, .gform_wrapper .was-validated input[type="date"]:valid,
-.was-validated .gform_wrapper input[type="datetime"]:valid, .gform_wrapper .was-validated input[type="datetime"]:valid,
-.was-validated .gform_wrapper input[type="datetime-local"]:valid, .gform_wrapper .was-validated input[type="datetime-local"]:valid,
-.was-validated .gform_wrapper input[type="month"]:valid, .gform_wrapper .was-validated input[type="month"]:valid,
-.was-validated .gform_wrapper input[type="number"]:valid, .gform_wrapper .was-validated input[type="number"]:valid,
-.was-validated .gform_wrapper input[type="password"]:valid, .gform_wrapper .was-validated input[type="password"]:valid,
-.was-validated .gform_wrapper input[type="search"]:valid, .gform_wrapper .was-validated input[type="search"]:valid,
-.was-validated .gform_wrapper input[type="tel"]:valid, .gform_wrapper .was-validated input[type="tel"]:valid,
-.was-validated .gform_wrapper input[type="text"]:valid, .gform_wrapper .was-validated input[type="text"]:valid,
-.was-validated .gform_wrapper input[type="time"]:valid, .gform_wrapper .was-validated input[type="time"]:valid,
-.was-validated .gform_wrapper input[type="week"]:valid, .gform_wrapper .was-validated input[type="week"]:valid,
-.was-validated .gform_wrapper input[type="url"]:valid, .gform_wrapper .was-validated input[type="url"]:valid,
-.was-validated .gform_wrapper select:valid, .gform_wrapper .was-validated select:valid,
-.was-validated .gform_wrapper textarea:valid, .gform_wrapper .was-validated textarea:valid,
-.was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:valid, body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid, .form-control.is-valid, .gform_wrapper input.is-valid[type="email"],
+.was-validated .gform_wrapper input[type="date"]:valid,
+.gform_wrapper .was-validated input[type="date"]:valid,
+.was-validated .gform_wrapper input[type="datetime"]:valid,
+.gform_wrapper .was-validated input[type="datetime"]:valid,
+.was-validated .gform_wrapper input[type="datetime-local"]:valid,
+.gform_wrapper .was-validated input[type="datetime-local"]:valid,
+.was-validated .gform_wrapper input[type="month"]:valid,
+.gform_wrapper .was-validated input[type="month"]:valid,
+.was-validated .gform_wrapper input[type="number"]:valid,
+.gform_wrapper .was-validated input[type="number"]:valid,
+.was-validated .gform_wrapper input[type="password"]:valid,
+.gform_wrapper .was-validated input[type="password"]:valid,
+.was-validated .gform_wrapper input[type="search"]:valid,
+.gform_wrapper .was-validated input[type="search"]:valid,
+.was-validated .gform_wrapper input[type="tel"]:valid,
+.gform_wrapper .was-validated input[type="tel"]:valid,
+.was-validated .gform_wrapper input[type="text"]:valid,
+.gform_wrapper .was-validated input[type="text"]:valid,
+.was-validated .gform_wrapper input[type="time"]:valid,
+.gform_wrapper .was-validated input[type="time"]:valid,
+.was-validated .gform_wrapper input[type="week"]:valid,
+.gform_wrapper .was-validated input[type="week"]:valid,
+.was-validated .gform_wrapper input[type="url"]:valid,
+.gform_wrapper .was-validated input[type="url"]:valid,
+.was-validated .gform_wrapper select:valid,
+.gform_wrapper .was-validated select:valid,
+.was-validated .gform_wrapper textarea:valid,
+.gform_wrapper .was-validated textarea:valid,
+.was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:valid,
+body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid, .form-control.is-valid, .gform_wrapper input.is-valid[type="email"],
 .gform_wrapper input.is-valid[type="date"],
 .gform_wrapper input.is-valid[type="datetime"],
 .gform_wrapper input.is-valid[type="datetime-local"],
@@ -1570,26 +1576,40 @@ body .gform_wrapper .chosen-container-multi textarea.chosen-choices {
 .gform_wrapper input.is-valid[type="url"],
 .gform_wrapper select.is-valid,
 .gform_wrapper textarea.is-valid,
-body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices, .was-validated
-.custom-select:valid,
+body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices, .was-validated .custom-select:valid,
 .custom-select.is-valid {
   border-color: #dc3545; }
   .was-validated .form-control:valid:focus, .was-validated .gform_wrapper input[type="email"]:valid:focus, .gform_wrapper .was-validated input[type="email"]:valid:focus,
-  .was-validated .gform_wrapper input[type="date"]:valid:focus, .gform_wrapper .was-validated input[type="date"]:valid:focus,
-  .was-validated .gform_wrapper input[type="datetime"]:valid:focus, .gform_wrapper .was-validated input[type="datetime"]:valid:focus,
-  .was-validated .gform_wrapper input[type="datetime-local"]:valid:focus, .gform_wrapper .was-validated input[type="datetime-local"]:valid:focus,
-  .was-validated .gform_wrapper input[type="month"]:valid:focus, .gform_wrapper .was-validated input[type="month"]:valid:focus,
-  .was-validated .gform_wrapper input[type="number"]:valid:focus, .gform_wrapper .was-validated input[type="number"]:valid:focus,
-  .was-validated .gform_wrapper input[type="password"]:valid:focus, .gform_wrapper .was-validated input[type="password"]:valid:focus,
-  .was-validated .gform_wrapper input[type="search"]:valid:focus, .gform_wrapper .was-validated input[type="search"]:valid:focus,
-  .was-validated .gform_wrapper input[type="tel"]:valid:focus, .gform_wrapper .was-validated input[type="tel"]:valid:focus,
-  .was-validated .gform_wrapper input[type="text"]:valid:focus, .gform_wrapper .was-validated input[type="text"]:valid:focus,
-  .was-validated .gform_wrapper input[type="time"]:valid:focus, .gform_wrapper .was-validated input[type="time"]:valid:focus,
-  .was-validated .gform_wrapper input[type="week"]:valid:focus, .gform_wrapper .was-validated input[type="week"]:valid:focus,
-  .was-validated .gform_wrapper input[type="url"]:valid:focus, .gform_wrapper .was-validated input[type="url"]:valid:focus,
-  .was-validated .gform_wrapper select:valid:focus, .gform_wrapper .was-validated select:valid:focus,
-  .was-validated .gform_wrapper textarea:valid:focus, .gform_wrapper .was-validated textarea:valid:focus,
-  .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:valid:focus, body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid:focus, .form-control.is-valid:focus, .gform_wrapper input.is-valid[type="email"]:focus,
+  .was-validated .gform_wrapper input[type="date"]:valid:focus,
+  .gform_wrapper .was-validated input[type="date"]:valid:focus,
+  .was-validated .gform_wrapper input[type="datetime"]:valid:focus,
+  .gform_wrapper .was-validated input[type="datetime"]:valid:focus,
+  .was-validated .gform_wrapper input[type="datetime-local"]:valid:focus,
+  .gform_wrapper .was-validated input[type="datetime-local"]:valid:focus,
+  .was-validated .gform_wrapper input[type="month"]:valid:focus,
+  .gform_wrapper .was-validated input[type="month"]:valid:focus,
+  .was-validated .gform_wrapper input[type="number"]:valid:focus,
+  .gform_wrapper .was-validated input[type="number"]:valid:focus,
+  .was-validated .gform_wrapper input[type="password"]:valid:focus,
+  .gform_wrapper .was-validated input[type="password"]:valid:focus,
+  .was-validated .gform_wrapper input[type="search"]:valid:focus,
+  .gform_wrapper .was-validated input[type="search"]:valid:focus,
+  .was-validated .gform_wrapper input[type="tel"]:valid:focus,
+  .gform_wrapper .was-validated input[type="tel"]:valid:focus,
+  .was-validated .gform_wrapper input[type="text"]:valid:focus,
+  .gform_wrapper .was-validated input[type="text"]:valid:focus,
+  .was-validated .gform_wrapper input[type="time"]:valid:focus,
+  .gform_wrapper .was-validated input[type="time"]:valid:focus,
+  .was-validated .gform_wrapper input[type="week"]:valid:focus,
+  .gform_wrapper .was-validated input[type="week"]:valid:focus,
+  .was-validated .gform_wrapper input[type="url"]:valid:focus,
+  .gform_wrapper .was-validated input[type="url"]:valid:focus,
+  .was-validated .gform_wrapper select:valid:focus,
+  .gform_wrapper .was-validated select:valid:focus,
+  .was-validated .gform_wrapper textarea:valid:focus,
+  .gform_wrapper .was-validated textarea:valid:focus,
+  .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:valid:focus,
+  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid:focus, .form-control.is-valid:focus, .gform_wrapper input.is-valid[type="email"]:focus,
   .gform_wrapper input.is-valid[type="date"]:focus,
   .gform_wrapper input.is-valid[type="datetime"]:focus,
   .gform_wrapper input.is-valid[type="datetime-local"]:focus,
@@ -1604,12 +1624,41 @@ body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices, .was-valid
   .gform_wrapper input.is-valid[type="url"]:focus,
   .gform_wrapper select.is-valid:focus,
   .gform_wrapper textarea.is-valid:focus,
-  body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices:focus, .was-validated
-  .custom-select:valid:focus,
+  body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices:focus, .was-validated .custom-select:valid:focus,
   .custom-select.is-valid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="email"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="email"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="date"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="date"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="datetime"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="datetime"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="datetime-local"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="datetime-local"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="month"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="month"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="number"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="number"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="password"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="password"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="search"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="search"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="tel"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="tel"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="text"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="text"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="time"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="time"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="week"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="week"]:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="url"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="url"]:valid ~ .valid-feedback, .was-validated .gform_wrapper select:valid ~ .valid-feedback, .gform_wrapper .was-validated select:valid ~ .valid-feedback, .was-validated .gform_wrapper textarea:valid ~ .valid-feedback, .gform_wrapper .was-validated textarea:valid ~ .valid-feedback, .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:valid ~ .valid-feedback, body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid ~ .valid-feedback,
+  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .gform_wrapper input[type="email"]:valid ~ .valid-feedback, .gform_wrapper .was-validated input[type="email"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="date"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="date"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="datetime"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="datetime"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="datetime-local"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="datetime-local"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="month"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="month"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="number"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="number"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="password"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="password"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="search"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="search"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="tel"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="tel"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="text"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="text"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="time"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="time"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="week"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="week"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper input[type="url"]:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated input[type="url"]:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper select:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated select:valid ~ .valid-feedback,
+  .was-validated .gform_wrapper textarea:valid ~ .valid-feedback,
+  .gform_wrapper .was-validated textarea:valid ~ .valid-feedback,
+  .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:valid ~ .valid-feedback,
+  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid ~ .valid-feedback,
   .was-validated .form-control:valid ~ .valid-tooltip,
   .was-validated .gform_wrapper input[type="email"]:valid ~ .valid-tooltip,
   .gform_wrapper .was-validated input[type="email"]:valid ~ .valid-tooltip,
@@ -1642,7 +1691,22 @@ body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices, .was-valid
   .was-validated .gform_wrapper textarea:valid ~ .valid-tooltip,
   .gform_wrapper .was-validated textarea:valid ~ .valid-tooltip,
   .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:valid ~ .valid-tooltip,
-  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .gform_wrapper input.is-valid[type="email"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="date"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="datetime"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="datetime-local"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="month"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="number"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="password"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="search"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="tel"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="text"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="time"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="week"] ~ .valid-feedback, .gform_wrapper input.is-valid[type="url"] ~ .valid-feedback, .gform_wrapper select.is-valid ~ .valid-feedback, .gform_wrapper textarea.is-valid ~ .valid-feedback, body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices ~ .valid-feedback,
+  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .gform_wrapper input.is-valid[type="email"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="date"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="datetime"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="datetime-local"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="month"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="number"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="password"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="search"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="tel"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="text"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="time"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="week"] ~ .valid-feedback,
+  .gform_wrapper input.is-valid[type="url"] ~ .valid-feedback,
+  .gform_wrapper select.is-valid ~ .valid-feedback,
+  .gform_wrapper textarea.is-valid ~ .valid-feedback,
+  body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices ~ .valid-feedback,
   .form-control.is-valid ~ .valid-tooltip,
   .gform_wrapper input.is-valid[type="email"] ~ .valid-tooltip,
   .gform_wrapper input.is-valid[type="date"] ~ .valid-tooltip,
@@ -1659,10 +1723,8 @@ body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices, .was-valid
   .gform_wrapper input.is-valid[type="url"] ~ .valid-tooltip,
   .gform_wrapper select.is-valid ~ .valid-tooltip,
   .gform_wrapper textarea.is-valid ~ .valid-tooltip,
-  body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices ~ .valid-tooltip, .was-validated
-  .custom-select:valid ~ .valid-feedback,
-  .was-validated
-  .custom-select:valid ~ .valid-tooltip,
+  body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices ~ .valid-tooltip, .was-validated .custom-select:valid ~ .valid-feedback,
+  .was-validated .custom-select:valid ~ .valid-tooltip,
   .custom-select.is-valid ~ .valid-feedback,
   .custom-select.is-valid ~ .valid-tooltip {
     display: block; }
@@ -1731,21 +1793,36 @@ body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices, .was-valid
   border-radius: 0.25rem; }
 
 .was-validated .form-control:invalid, .was-validated .gform_wrapper input[type="email"]:invalid, .gform_wrapper .was-validated input[type="email"]:invalid,
-.was-validated .gform_wrapper input[type="date"]:invalid, .gform_wrapper .was-validated input[type="date"]:invalid,
-.was-validated .gform_wrapper input[type="datetime"]:invalid, .gform_wrapper .was-validated input[type="datetime"]:invalid,
-.was-validated .gform_wrapper input[type="datetime-local"]:invalid, .gform_wrapper .was-validated input[type="datetime-local"]:invalid,
-.was-validated .gform_wrapper input[type="month"]:invalid, .gform_wrapper .was-validated input[type="month"]:invalid,
-.was-validated .gform_wrapper input[type="number"]:invalid, .gform_wrapper .was-validated input[type="number"]:invalid,
-.was-validated .gform_wrapper input[type="password"]:invalid, .gform_wrapper .was-validated input[type="password"]:invalid,
-.was-validated .gform_wrapper input[type="search"]:invalid, .gform_wrapper .was-validated input[type="search"]:invalid,
-.was-validated .gform_wrapper input[type="tel"]:invalid, .gform_wrapper .was-validated input[type="tel"]:invalid,
-.was-validated .gform_wrapper input[type="text"]:invalid, .gform_wrapper .was-validated input[type="text"]:invalid,
-.was-validated .gform_wrapper input[type="time"]:invalid, .gform_wrapper .was-validated input[type="time"]:invalid,
-.was-validated .gform_wrapper input[type="week"]:invalid, .gform_wrapper .was-validated input[type="week"]:invalid,
-.was-validated .gform_wrapper input[type="url"]:invalid, .gform_wrapper .was-validated input[type="url"]:invalid,
-.was-validated .gform_wrapper select:invalid, .gform_wrapper .was-validated select:invalid,
-.was-validated .gform_wrapper textarea:invalid, .gform_wrapper .was-validated textarea:invalid,
-.was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:invalid, body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid, .form-control.is-invalid, .gform_wrapper input.is-invalid[type="email"],
+.was-validated .gform_wrapper input[type="date"]:invalid,
+.gform_wrapper .was-validated input[type="date"]:invalid,
+.was-validated .gform_wrapper input[type="datetime"]:invalid,
+.gform_wrapper .was-validated input[type="datetime"]:invalid,
+.was-validated .gform_wrapper input[type="datetime-local"]:invalid,
+.gform_wrapper .was-validated input[type="datetime-local"]:invalid,
+.was-validated .gform_wrapper input[type="month"]:invalid,
+.gform_wrapper .was-validated input[type="month"]:invalid,
+.was-validated .gform_wrapper input[type="number"]:invalid,
+.gform_wrapper .was-validated input[type="number"]:invalid,
+.was-validated .gform_wrapper input[type="password"]:invalid,
+.gform_wrapper .was-validated input[type="password"]:invalid,
+.was-validated .gform_wrapper input[type="search"]:invalid,
+.gform_wrapper .was-validated input[type="search"]:invalid,
+.was-validated .gform_wrapper input[type="tel"]:invalid,
+.gform_wrapper .was-validated input[type="tel"]:invalid,
+.was-validated .gform_wrapper input[type="text"]:invalid,
+.gform_wrapper .was-validated input[type="text"]:invalid,
+.was-validated .gform_wrapper input[type="time"]:invalid,
+.gform_wrapper .was-validated input[type="time"]:invalid,
+.was-validated .gform_wrapper input[type="week"]:invalid,
+.gform_wrapper .was-validated input[type="week"]:invalid,
+.was-validated .gform_wrapper input[type="url"]:invalid,
+.gform_wrapper .was-validated input[type="url"]:invalid,
+.was-validated .gform_wrapper select:invalid,
+.gform_wrapper .was-validated select:invalid,
+.was-validated .gform_wrapper textarea:invalid,
+.gform_wrapper .was-validated textarea:invalid,
+.was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:invalid,
+body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid, .form-control.is-invalid, .gform_wrapper input.is-invalid[type="email"],
 .gform_wrapper input.is-invalid[type="date"],
 .gform_wrapper input.is-invalid[type="datetime"],
 .gform_wrapper input.is-invalid[type="datetime-local"],
@@ -1760,26 +1837,40 @@ body .gform_wrapper .chosen-container-multi .is-valid.chosen-choices, .was-valid
 .gform_wrapper input.is-invalid[type="url"],
 .gform_wrapper select.is-invalid,
 .gform_wrapper textarea.is-invalid,
-body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-validated
-.custom-select:invalid,
+body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #dc3545; }
   .was-validated .form-control:invalid:focus, .was-validated .gform_wrapper input[type="email"]:invalid:focus, .gform_wrapper .was-validated input[type="email"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="date"]:invalid:focus, .gform_wrapper .was-validated input[type="date"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="datetime"]:invalid:focus, .gform_wrapper .was-validated input[type="datetime"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="datetime-local"]:invalid:focus, .gform_wrapper .was-validated input[type="datetime-local"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="month"]:invalid:focus, .gform_wrapper .was-validated input[type="month"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="number"]:invalid:focus, .gform_wrapper .was-validated input[type="number"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="password"]:invalid:focus, .gform_wrapper .was-validated input[type="password"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="search"]:invalid:focus, .gform_wrapper .was-validated input[type="search"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="tel"]:invalid:focus, .gform_wrapper .was-validated input[type="tel"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="text"]:invalid:focus, .gform_wrapper .was-validated input[type="text"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="time"]:invalid:focus, .gform_wrapper .was-validated input[type="time"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="week"]:invalid:focus, .gform_wrapper .was-validated input[type="week"]:invalid:focus,
-  .was-validated .gform_wrapper input[type="url"]:invalid:focus, .gform_wrapper .was-validated input[type="url"]:invalid:focus,
-  .was-validated .gform_wrapper select:invalid:focus, .gform_wrapper .was-validated select:invalid:focus,
-  .was-validated .gform_wrapper textarea:invalid:focus, .gform_wrapper .was-validated textarea:invalid:focus,
-  .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:invalid:focus, body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid:focus, .form-control.is-invalid:focus, .gform_wrapper input.is-invalid[type="email"]:focus,
+  .was-validated .gform_wrapper input[type="date"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="date"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="datetime"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="datetime"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="datetime-local"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="datetime-local"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="month"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="month"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="number"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="number"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="password"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="password"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="search"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="search"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="tel"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="tel"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="text"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="text"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="time"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="time"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="week"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="week"]:invalid:focus,
+  .was-validated .gform_wrapper input[type="url"]:invalid:focus,
+  .gform_wrapper .was-validated input[type="url"]:invalid:focus,
+  .was-validated .gform_wrapper select:invalid:focus,
+  .gform_wrapper .was-validated select:invalid:focus,
+  .was-validated .gform_wrapper textarea:invalid:focus,
+  .gform_wrapper .was-validated textarea:invalid:focus,
+  .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:invalid:focus,
+  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid:focus, .form-control.is-invalid:focus, .gform_wrapper input.is-invalid[type="email"]:focus,
   .gform_wrapper input.is-invalid[type="date"]:focus,
   .gform_wrapper input.is-invalid[type="datetime"]:focus,
   .gform_wrapper input.is-invalid[type="datetime-local"]:focus,
@@ -1794,12 +1885,41 @@ body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-val
   .gform_wrapper input.is-invalid[type="url"]:focus,
   .gform_wrapper select.is-invalid:focus,
   .gform_wrapper textarea.is-invalid:focus,
-  body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices:focus, .was-validated
-  .custom-select:invalid:focus,
+  body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices:focus, .was-validated .custom-select:invalid:focus,
   .custom-select.is-invalid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="email"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="email"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="date"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="date"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="datetime"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="datetime"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="datetime-local"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="datetime-local"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="month"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="month"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="number"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="number"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="password"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="password"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="search"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="search"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="tel"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="tel"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="text"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="text"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="time"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="time"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="week"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="week"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="url"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="url"]:invalid ~ .invalid-feedback, .was-validated .gform_wrapper select:invalid ~ .invalid-feedback, .gform_wrapper .was-validated select:invalid ~ .invalid-feedback, .was-validated .gform_wrapper textarea:invalid ~ .invalid-feedback, .gform_wrapper .was-validated textarea:invalid ~ .invalid-feedback, .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:invalid ~ .invalid-feedback, body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid ~ .invalid-feedback,
+  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .gform_wrapper input[type="email"]:invalid ~ .invalid-feedback, .gform_wrapper .was-validated input[type="email"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="date"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="date"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="datetime"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="datetime"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="datetime-local"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="datetime-local"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="month"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="month"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="number"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="number"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="password"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="password"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="search"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="search"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="tel"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="tel"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="text"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="text"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="time"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="time"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="week"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="week"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper input[type="url"]:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated input[type="url"]:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper select:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated select:invalid ~ .invalid-feedback,
+  .was-validated .gform_wrapper textarea:invalid ~ .invalid-feedback,
+  .gform_wrapper .was-validated textarea:invalid ~ .invalid-feedback,
+  .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:invalid ~ .invalid-feedback,
+  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid ~ .invalid-feedback,
   .was-validated .form-control:invalid ~ .invalid-tooltip,
   .was-validated .gform_wrapper input[type="email"]:invalid ~ .invalid-tooltip,
   .gform_wrapper .was-validated input[type="email"]:invalid ~ .invalid-tooltip,
@@ -1832,7 +1952,22 @@ body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-val
   .was-validated .gform_wrapper textarea:invalid ~ .invalid-tooltip,
   .gform_wrapper .was-validated textarea:invalid ~ .invalid-tooltip,
   .was-validated body .gform_wrapper .chosen-container-multi .chosen-choices:invalid ~ .invalid-tooltip,
-  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="email"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="date"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="datetime"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="datetime-local"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="month"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="number"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="password"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="search"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="tel"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="text"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="time"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="week"] ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="url"] ~ .invalid-feedback, .gform_wrapper select.is-invalid ~ .invalid-feedback, .gform_wrapper textarea.is-invalid ~ .invalid-feedback, body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices ~ .invalid-feedback,
+  body .gform_wrapper .chosen-container-multi .was-validated .chosen-choices:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .gform_wrapper input.is-invalid[type="email"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="date"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="datetime"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="datetime-local"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="month"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="number"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="password"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="search"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="tel"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="text"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="time"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="week"] ~ .invalid-feedback,
+  .gform_wrapper input.is-invalid[type="url"] ~ .invalid-feedback,
+  .gform_wrapper select.is-invalid ~ .invalid-feedback,
+  .gform_wrapper textarea.is-invalid ~ .invalid-feedback,
+  body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices ~ .invalid-feedback,
   .form-control.is-invalid ~ .invalid-tooltip,
   .gform_wrapper input.is-invalid[type="email"] ~ .invalid-tooltip,
   .gform_wrapper input.is-invalid[type="date"] ~ .invalid-tooltip,
@@ -1849,10 +1984,8 @@ body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-val
   .gform_wrapper input.is-invalid[type="url"] ~ .invalid-tooltip,
   .gform_wrapper select.is-invalid ~ .invalid-tooltip,
   .gform_wrapper textarea.is-invalid ~ .invalid-tooltip,
-  body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices ~ .invalid-tooltip, .was-validated
-  .custom-select:invalid ~ .invalid-feedback,
-  .was-validated
-  .custom-select:invalid ~ .invalid-tooltip,
+  body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices ~ .invalid-tooltip, .was-validated .custom-select:invalid ~ .invalid-feedback,
+  .was-validated .custom-select:invalid ~ .invalid-tooltip,
   .custom-select.is-invalid ~ .invalid-feedback,
   .custom-select.is-invalid ~ .invalid-tooltip {
     display: block; }
@@ -1918,21 +2051,36 @@ body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-val
       align-items: center;
       margin-bottom: 0; }
     .form-inline .form-control, .form-inline .gform_wrapper input[type="email"], .gform_wrapper .form-inline input[type="email"],
-    .form-inline .gform_wrapper input[type="date"], .gform_wrapper .form-inline input[type="date"],
-    .form-inline .gform_wrapper input[type="datetime"], .gform_wrapper .form-inline input[type="datetime"],
-    .form-inline .gform_wrapper input[type="datetime-local"], .gform_wrapper .form-inline input[type="datetime-local"],
-    .form-inline .gform_wrapper input[type="month"], .gform_wrapper .form-inline input[type="month"],
-    .form-inline .gform_wrapper input[type="number"], .gform_wrapper .form-inline input[type="number"],
-    .form-inline .gform_wrapper input[type="password"], .gform_wrapper .form-inline input[type="password"],
-    .form-inline .gform_wrapper input[type="search"], .gform_wrapper .form-inline input[type="search"],
-    .form-inline .gform_wrapper input[type="tel"], .gform_wrapper .form-inline input[type="tel"],
-    .form-inline .gform_wrapper input[type="text"], .gform_wrapper .form-inline input[type="text"],
-    .form-inline .gform_wrapper input[type="time"], .gform_wrapper .form-inline input[type="time"],
-    .form-inline .gform_wrapper input[type="week"], .gform_wrapper .form-inline input[type="week"],
-    .form-inline .gform_wrapper input[type="url"], .gform_wrapper .form-inline input[type="url"],
-    .form-inline .gform_wrapper select, .gform_wrapper .form-inline select,
-    .form-inline .gform_wrapper textarea, .gform_wrapper .form-inline textarea,
-    .form-inline body .gform_wrapper .chosen-container-multi .chosen-choices, body .gform_wrapper .chosen-container-multi .form-inline .chosen-choices {
+    .form-inline .gform_wrapper input[type="date"],
+    .gform_wrapper .form-inline input[type="date"],
+    .form-inline .gform_wrapper input[type="datetime"],
+    .gform_wrapper .form-inline input[type="datetime"],
+    .form-inline .gform_wrapper input[type="datetime-local"],
+    .gform_wrapper .form-inline input[type="datetime-local"],
+    .form-inline .gform_wrapper input[type="month"],
+    .gform_wrapper .form-inline input[type="month"],
+    .form-inline .gform_wrapper input[type="number"],
+    .gform_wrapper .form-inline input[type="number"],
+    .form-inline .gform_wrapper input[type="password"],
+    .gform_wrapper .form-inline input[type="password"],
+    .form-inline .gform_wrapper input[type="search"],
+    .gform_wrapper .form-inline input[type="search"],
+    .form-inline .gform_wrapper input[type="tel"],
+    .gform_wrapper .form-inline input[type="tel"],
+    .form-inline .gform_wrapper input[type="text"],
+    .gform_wrapper .form-inline input[type="text"],
+    .form-inline .gform_wrapper input[type="time"],
+    .gform_wrapper .form-inline input[type="time"],
+    .form-inline .gform_wrapper input[type="week"],
+    .gform_wrapper .form-inline input[type="week"],
+    .form-inline .gform_wrapper input[type="url"],
+    .gform_wrapper .form-inline input[type="url"],
+    .form-inline .gform_wrapper select,
+    .gform_wrapper .form-inline select,
+    .form-inline .gform_wrapper textarea,
+    .gform_wrapper .form-inline textarea,
+    .form-inline body .gform_wrapper .chosen-container-multi .chosen-choices,
+    body .gform_wrapper .chosen-container-multi .form-inline .chosen-choices {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -1957,8 +2105,7 @@ body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-val
       justify-content: center; }
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
-
-.btn, .gform_wrapper .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover {
+.btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1972,51 +2119,45 @@ body .gform_wrapper .chosen-container-multi .is-invalid.chosen-choices, .was-val
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
-    .btn, .gform_wrapper .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover {
+    .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button {
       transition: none; } }
-  .btn:hover, .gform_wrapper .button:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .btn:focus, .gform_wrapper .button:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:focus {
+  .btn:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button:hover, .btn:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:focus, .gform_wrapper .button:focus {
     text-decoration: none; }
-  .btn:focus, .gform_wrapper .button:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:focus, .btn.focus, .gform_wrapper .focus.button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .focus.gpnf-add-entry {
+  .btn:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:focus, .gform_wrapper .button:focus, .btn.focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .focus.gpnf-add-entry, .gform_wrapper .focus.button {
     outline: 0;
     box-shadow: none; }
-  .btn.disabled, .gform_wrapper .disabled.button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .disabled.gpnf-add-entry, .btn:disabled, .gform_wrapper .button:disabled, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:disabled {
+  .btn.disabled, body .gform_wrapper .gform_body .gpnf-nested-entries-container .disabled.gpnf-add-entry, .gform_wrapper .disabled.button, .btn:disabled, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:disabled, .gform_wrapper .button:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .gform_wrapper .button:not(:disabled):not(.disabled), body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:not(:disabled):not(.disabled), .gform_wrapper .button:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
-a.btn.disabled, .gform_wrapper a.disabled.button, body .gform_wrapper .gform_body .gpnf-nested-entries-container a.disabled.gpnf-add-entry,
+a.btn.disabled, body .gform_wrapper .gform_body .gpnf-nested-entries-container a.disabled.gpnf-add-entry, .gform_wrapper a.disabled.button,
 fieldset:disabled a.btn,
-fieldset:disabled .gform_wrapper a.button,
-.gform_wrapper fieldset:disabled a.button,
 fieldset:disabled body .gform_wrapper .gform_body .gpnf-nested-entries-container a.gpnf-add-entry,
-body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled a.gpnf-add-entry {
+body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled a.gpnf-add-entry,
+fieldset:disabled .gform_wrapper a.button,
+.gform_wrapper fieldset:disabled a.button {
   pointer-events: none; }
 
-.btn-primary, .gform_wrapper .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover {
+.btn-primary, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button {
   color: #212529;
   background-color: #d3af1d;
   border-color: #d3af1d; }
-  .btn-primary:hover, .gform_wrapper .button:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover {
+  .btn-primary:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button:hover {
     color: #fff;
     background-color: #b19318;
     border-color: #a68a17; }
-  .btn-primary:focus, .gform_wrapper .button:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:focus, .btn-primary.focus, .gform_wrapper .focus.button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .focus.gpnf-add-entry {
+  .btn-primary:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:focus, .gform_wrapper .button:focus, .btn-primary.focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .focus.gpnf-add-entry, .gform_wrapper .focus.button {
     box-shadow: 0 0 0 0.2rem rgba(211, 175, 29, 0.5); }
-  .btn-primary.disabled, .gform_wrapper .disabled.button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .disabled.gpnf-add-entry, .btn-primary:disabled, .gform_wrapper .button:disabled, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:disabled {
+  .btn-primary.disabled, body .gform_wrapper .gform_body .gpnf-nested-entries-container .disabled.gpnf-add-entry, .gform_wrapper .disabled.button, .btn-primary:disabled, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:disabled, .gform_wrapper .button:disabled {
     color: #212529;
     background-color: #d3af1d;
     border-color: #d3af1d; }
-  .btn-primary:not(:disabled):not(.disabled):active, .gform_wrapper .button:not(:disabled):not(.disabled):active, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .gform_wrapper :not(:disabled):not(.disabled).active.button, body .gform_wrapper .gform_body .gpnf-nested-entries-container :not(:disabled):not(.disabled).active.gpnf-add-entry,
-  .show > .btn-primary.dropdown-toggle,
-  .gform_wrapper .show > .dropdown-toggle.button,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .show > .dropdown-toggle.gpnf-add-entry {
+  .btn-primary:not(:disabled):not(.disabled):active, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:not(:disabled):not(.disabled):active, .gform_wrapper .button:not(:disabled):not(.disabled):active, .btn-primary.active:not(:disabled):not(.disabled), body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry.active:not(:disabled):not(.disabled), .gform_wrapper .button.active:not(:disabled):not(.disabled), .show > .btn-primary.dropdown-toggle, body .gform_wrapper .gform_body .gpnf-nested-entries-container .show > .dropdown-toggle.gpnf-add-entry, .gform_wrapper .show > .dropdown-toggle.button {
     color: #fff;
     background-color: #a68a17;
     border-color: #9b8115; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .gform_wrapper .button:not(:disabled):not(.disabled):active:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .gform_wrapper :not(:disabled):not(.disabled).active.button:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container :not(:disabled):not(.disabled).active.gpnf-add-entry:focus,
-    .show > .btn-primary.dropdown-toggle:focus,
-    .gform_wrapper .show > .dropdown-toggle.button:focus,
-    body .gform_wrapper .gform_body .gpnf-nested-entries-container .show > .dropdown-toggle.gpnf-add-entry:focus {
+    .btn-primary:not(:disabled):not(.disabled):active:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:not(:disabled):not(.disabled):active:focus, .gform_wrapper .button:not(:disabled):not(.disabled):active:focus, .btn-primary.active:not(:disabled):not(.disabled):focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry.active:not(:disabled):not(.disabled):focus, .gform_wrapper .button.active:not(:disabled):not(.disabled):focus, .show > .btn-primary.dropdown-toggle:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .show > .dropdown-toggle.gpnf-add-entry:focus, .gform_wrapper .show > .dropdown-toggle.button:focus {
       box-shadow: 0 0 0 0.2rem rgba(211, 175, 29, 0.5); }
 
 .btn-secondary {
@@ -2033,13 +2174,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #fff;
     background-color: #064D80;
     border-color: #064D80; }
-  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
-  .show > .btn-secondary.dropdown-toggle {
+  .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary.active:not(:disabled):not(.disabled), .show > .btn-secondary.dropdown-toggle {
     color: #fff;
     background-color: #04304f;
     border-color: #032843; }
-    .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-secondary.dropdown-toggle:focus {
+    .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary.active:not(:disabled):not(.disabled):focus, .show > .btn-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(6, 77, 128, 0.5); }
 
 .btn-success {
@@ -2056,13 +2195,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-  .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
-  .show > .btn-success.dropdown-toggle {
+  .btn-success:not(:disabled):not(.disabled):active, .btn-success.active:not(:disabled):not(.disabled), .show > .btn-success.dropdown-toggle {
     color: #fff;
     background-color: #bd2130;
     border-color: #b21f2d; }
-    .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-success.dropdown-toggle:focus {
+    .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success.active:not(:disabled):not(.disabled):focus, .show > .btn-success.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
 .btn-info {
@@ -2079,13 +2216,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107; }
-  .btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active,
-  .show > .btn-info.dropdown-toggle {
+  .btn-info:not(:disabled):not(.disabled):active, .btn-info.active:not(:disabled):not(.disabled), .show > .btn-info.dropdown-toggle {
     color: #212529;
     background-color: #d39e00;
     border-color: #c69500; }
-    .btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-info.dropdown-toggle:focus {
+    .btn-info:not(:disabled):not(.disabled):active:focus, .btn-info.active:not(:disabled):not(.disabled):focus, .show > .btn-info.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
 
 .btn-warning {
@@ -2102,13 +2237,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107; }
-  .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
-  .show > .btn-warning.dropdown-toggle {
+  .btn-warning:not(:disabled):not(.disabled):active, .btn-warning.active:not(:disabled):not(.disabled), .show > .btn-warning.dropdown-toggle {
     color: #212529;
     background-color: #d39e00;
     border-color: #c69500; }
-    .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-warning.dropdown-toggle:focus {
+    .btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning.active:not(:disabled):not(.disabled):focus, .show > .btn-warning.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
 
 .btn-danger {
@@ -2125,13 +2258,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-  .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active,
-  .show > .btn-danger.dropdown-toggle {
+  .btn-danger:not(:disabled):not(.disabled):active, .btn-danger.active:not(:disabled):not(.disabled), .show > .btn-danger.dropdown-toggle {
     color: #fff;
     background-color: #bd2130;
     border-color: #b21f2d; }
-    .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-danger.dropdown-toggle:focus {
+    .btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger.active:not(:disabled):not(.disabled):focus, .show > .btn-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
 .btn-light {
@@ -2148,13 +2279,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #212529;
     background-color: #dee2e6;
     border-color: #dee2e6; }
-  .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
-  .show > .btn-light.dropdown-toggle {
+  .btn-light:not(:disabled):not(.disabled):active, .btn-light.active:not(:disabled):not(.disabled), .show > .btn-light.dropdown-toggle {
     color: #212529;
     background-color: #c1c9d0;
     border-color: #bac2cb; }
-    .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-light.dropdown-toggle:focus {
+    .btn-light:not(:disabled):not(.disabled):active:focus, .btn-light.active:not(:disabled):not(.disabled):focus, .show > .btn-light.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(222, 226, 230, 0.5); }
 
 .btn-dark {
@@ -2171,13 +2300,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #fff;
     background-color: #343a40;
     border-color: #343a40; }
-  .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,
-  .show > .btn-dark.dropdown-toggle {
+  .btn-dark:not(:disabled):not(.disabled):active, .btn-dark.active:not(:disabled):not(.disabled), .show > .btn-dark.dropdown-toggle {
     color: #fff;
     background-color: #1d2124;
     border-color: #171a1d; }
-    .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-dark.dropdown-toggle:focus {
+    .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark.active:not(:disabled):not(.disabled):focus, .show > .btn-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
 .btn-outline-primary {
@@ -2194,13 +2321,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-primary.disabled, .btn-outline-primary:disabled {
     color: #d3af1d;
     background-color: transparent; }
-  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-primary.dropdown-toggle {
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary.active:not(:disabled):not(.disabled), .show > .btn-outline-primary.dropdown-toggle {
     color: #212529;
     background-color: #d3af1d;
     border-color: #d3af1d; }
-    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-primary.dropdown-toggle:focus {
+    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(211, 175, 29, 0.5); }
 
 .btn-outline-secondary {
@@ -2217,13 +2342,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
     color: #064D80;
     background-color: transparent; }
-  .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-secondary.dropdown-toggle {
+  .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary.active:not(:disabled):not(.disabled), .show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
     background-color: #064D80;
     border-color: #064D80; }
-    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-secondary.dropdown-toggle:focus {
+    .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(6, 77, 128, 0.5); }
 
 .btn-outline-success {
@@ -2240,13 +2363,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-success.disabled, .btn-outline-success:disabled {
     color: #dc3545;
     background-color: transparent; }
-  .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-success.dropdown-toggle {
+  .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success.active:not(:disabled):not(.disabled), .show > .btn-outline-success.dropdown-toggle {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-    .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-success.dropdown-toggle:focus {
+    .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-success.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
 .btn-outline-info {
@@ -2263,13 +2384,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-info.disabled, .btn-outline-info:disabled {
     color: #ffc107;
     background-color: transparent; }
-  .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-info.dropdown-toggle {
+  .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info.active:not(:disabled):not(.disabled), .show > .btn-outline-info.dropdown-toggle {
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107; }
-    .btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-info.dropdown-toggle:focus {
+    .btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-info.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
 
 .btn-outline-warning {
@@ -2286,13 +2405,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-warning.disabled, .btn-outline-warning:disabled {
     color: #ffc107;
     background-color: transparent; }
-  .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-warning.dropdown-toggle {
+  .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning.active:not(:disabled):not(.disabled), .show > .btn-outline-warning.dropdown-toggle {
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107; }
-    .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-warning.dropdown-toggle:focus {
+    .btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-warning.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5); }
 
 .btn-outline-danger {
@@ -2309,13 +2426,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-danger.disabled, .btn-outline-danger:disabled {
     color: #dc3545;
     background-color: transparent; }
-  .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-danger.dropdown-toggle {
+  .btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger.active:not(:disabled):not(.disabled), .show > .btn-outline-danger.dropdown-toggle {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545; }
-    .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-danger.dropdown-toggle:focus {
+    .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-danger.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); }
 
 .btn-outline-light {
@@ -2332,13 +2447,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-light.disabled, .btn-outline-light:disabled {
     color: #dee2e6;
     background-color: transparent; }
-  .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-light.dropdown-toggle {
+  .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light.active:not(:disabled):not(.disabled), .show > .btn-outline-light.dropdown-toggle {
     color: #212529;
     background-color: #dee2e6;
     border-color: #dee2e6; }
-    .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-light.dropdown-toggle:focus {
+    .btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-light.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(222, 226, 230, 0.5); }
 
 .btn-outline-dark {
@@ -2355,13 +2468,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
     color: #343a40;
     background-color: transparent; }
-  .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-dark.dropdown-toggle {
+  .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark.active:not(:disabled):not(.disabled), .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
     background-color: #343a40;
     border-color: #343a40; }
-    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-dark.dropdown-toggle:focus {
+    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
 .btn-link {
@@ -2381,13 +2492,13 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, .gform_wrapper .btn-group-lg > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-lg > .gpnf-add-entry {
+.btn-lg, .btn-group-lg > .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-lg > .gpnf-add-entry, .gform_wrapper .btn-group-lg > .button {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .gform_wrapper .btn-group-sm > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-sm > .gpnf-add-entry, body .gform_wrapper .gform_footer .button {
+.btn-sm, body .gform_wrapper .gform_footer .button, .btn-group-sm > .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-sm > .gpnf-add-entry, .gform_wrapper .btn-group-sm > .button {
   padding: 0.45rem 0.5rem;
   font-size: 0.9rem;
   line-height: 1.3;
@@ -2399,11 +2510,11 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container fieldset:disabled
   .btn-block + .btn-block, body .gform_wrapper .gform_footer .button + .btn-block, body .gform_wrapper .gform_footer .btn-block + .button, body .gform_wrapper .gform_footer .button + .button {
     margin-top: 0.5rem; }
 
-input[type="submit"].btn-block, body .gform_wrapper .gform_footer input.button[type="submit"],
-input[type="reset"].btn-block,
-body .gform_wrapper .gform_footer input.button[type="reset"],
-input[type="button"].btn-block,
-body .gform_wrapper .gform_footer input.button[type="button"] {
+input.btn-block[type="submit"], body .gform_wrapper .gform_footer .button[type="submit"],
+input.btn-block[type="reset"],
+body .gform_wrapper .gform_footer .button[type="reset"],
+input.btn-block[type="button"],
+body .gform_wrapper .gform_footer .button[type="button"] {
   width: 100%; }
 
 .fade {
@@ -2425,7 +2536,6 @@ body .gform_wrapper .gform_footer input.button[type="button"] {
   @media screen and (prefers-reduced-motion: reduce) {
     .collapsing {
       transition: none; } }
-
 .dropup,
 .dropright,
 .dropdown,
@@ -2605,69 +2715,97 @@ body .gform_wrapper .gform_footer input.button[type="button"] {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .gform_wrapper .btn-group > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry,
+  .btn-group > .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry, .gform_wrapper .btn-group > .button,
   .btn-group-vertical > .btn,
-  .gform_wrapper .btn-group-vertical > .button,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry {
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry,
+  .gform_wrapper .btn-group-vertical > .button {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .gform_wrapper .btn-group > .button:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:hover,
+    .btn-group > .btn:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:hover, .gform_wrapper .btn-group > .button:hover,
     .btn-group-vertical > .btn:hover,
-    .gform_wrapper .btn-group-vertical > .button:hover,
-    body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:hover {
+    body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:hover,
+    .gform_wrapper .btn-group-vertical > .button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .gform_wrapper .btn-group > .button:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:focus, .btn-group > .btn:active, .gform_wrapper .btn-group > .button:active, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:active, .btn-group > .btn.active, .gform_wrapper .btn-group > .active.button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .active.gpnf-add-entry,
+    .btn-group > .btn:focus, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:focus, .gform_wrapper .btn-group > .button:focus, .btn-group > .btn:active, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:active, .gform_wrapper .btn-group > .button:active, .btn-group > .btn.active, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .active.gpnf-add-entry, .gform_wrapper .btn-group > .active.button,
     .btn-group-vertical > .btn:focus,
-    .gform_wrapper .btn-group-vertical > .button:focus,
     body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:focus,
+    .gform_wrapper .btn-group-vertical > .button:focus,
     .btn-group-vertical > .btn:active,
-    .gform_wrapper .btn-group-vertical > .button:active,
     body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:active,
+    .gform_wrapper .btn-group-vertical > .button:active,
     .btn-group-vertical > .btn.active,
-    .gform_wrapper .btn-group-vertical > .active.button,
-    body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .active.gpnf-add-entry {
+    body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .active.gpnf-add-entry,
+    .gform_wrapper .btn-group-vertical > .active.button {
       z-index: 1; }
-  .btn-group .btn + .btn, .btn-group .gform_wrapper .button + .btn, .gform_wrapper .btn-group .button + .btn, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .btn, .btn-group .gform_wrapper .btn + .button, .gform_wrapper .btn-group .btn + .button, .btn-group .gform_wrapper .button + .button, .gform_wrapper .btn-group .button + .button, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .button, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .btn + .gpnf-add-entry, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .btn-group .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .gform_wrapper .btn-group .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .button + .gpnf-add-entry, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .gpnf-add-entry,
+  .btn-group .btn + .btn, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .btn, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry:hover + .btn, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .btn + .gpnf-add-entry, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .gpnf-add-entry, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry:hover + .gpnf-add-entry, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .btn + .gpnf-add-entry:hover, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .gpnf-add-entry:hover, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry:hover + .gpnf-add-entry:hover, .btn-group .gform_wrapper .button + .btn, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .btn-group .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover, body .btn-group .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover, .gform_wrapper .btn-group .button + .btn, body .gform_wrapper .btn-group .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .button + .gpnf-add-entry, body .gform_wrapper .btn-group .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .button + .gpnf-add-entry:hover, .btn-group .gform_wrapper .btn + .button, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, body .btn-group .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button, body .btn-group .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button, .gform_wrapper .btn-group .btn + .button, body .gform_wrapper .btn-group .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .button, body .gform_wrapper .btn-group .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry:hover + .button, .btn-group .gform_wrapper .button + .button, .gform_wrapper .btn-group .button + .button,
   .btn-group .btn + .btn-group,
-  .btn-group .gform_wrapper .button + .btn-group,
-  .gform_wrapper .btn-group .button + .btn-group,
   .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn-group,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry + .btn-group,
+  .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .btn-group,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .gpnf-add-entry:hover + .btn-group,
+  .btn-group .gform_wrapper .button + .btn-group,
+  .gform_wrapper .btn-group .button + .btn-group,
   .btn-group .btn-group + .btn,
-  .btn-group .gform_wrapper .btn-group + .button,
-  .gform_wrapper .btn-group .btn-group + .button,
   .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group + .gpnf-add-entry,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .btn-group + .gpnf-add-entry,
+  .btn-group body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group .btn-group + .gpnf-add-entry:hover,
+  .btn-group .gform_wrapper .btn-group + .button,
+  .gform_wrapper .btn-group .btn-group + .button,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
-  .btn-group-vertical .gform_wrapper .button + .btn,
-  .gform_wrapper .btn-group-vertical .button + .btn,
   .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry + .btn,
-  .btn-group-vertical .gform_wrapper .btn + .button,
-  .gform_wrapper .btn-group-vertical .btn + .button,
-  .btn-group-vertical .gform_wrapper .button + .button,
-  .gform_wrapper .btn-group-vertical .button + .button,
-  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry + .button,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .btn,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry:hover + .btn,
   .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .btn + .gpnf-add-entry,
-  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
-  body .btn-group-vertical .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
-  body .gform_wrapper .btn-group-vertical .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .button + .gpnf-add-entry,
   .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry + .gpnf-add-entry,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry:hover + .gpnf-add-entry,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .btn + .gpnf-add-entry:hover,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry + .gpnf-add-entry:hover,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry:hover + .gpnf-add-entry:hover,
+  .btn-group-vertical .gform_wrapper .button + .btn,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
+  body .btn-group-vertical .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover,
+  body .btn-group-vertical .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover,
+  .gform_wrapper .btn-group-vertical .button + .btn,
+  body .gform_wrapper .btn-group-vertical .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .button + .gpnf-add-entry,
+  body .gform_wrapper .btn-group-vertical .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .button + .gpnf-add-entry:hover,
+  .btn-group-vertical .gform_wrapper .btn + .button,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
+  body .btn-group-vertical .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button,
+  body .btn-group-vertical .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button,
+  .gform_wrapper .btn-group-vertical .btn + .button,
+  body .gform_wrapper .btn-group-vertical .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry + .button,
+  body .gform_wrapper .btn-group-vertical .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry:hover + .button,
+  .btn-group-vertical .gform_wrapper .button + .button,
+  .gform_wrapper .btn-group-vertical .button + .button,
   .btn-group-vertical .btn + .btn-group,
-  .btn-group-vertical .gform_wrapper .button + .btn-group,
-  .gform_wrapper .btn-group-vertical .button + .btn-group,
   .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn-group,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry + .btn-group,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .btn-group,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry:hover + .btn-group,
+  .btn-group-vertical .gform_wrapper .button + .btn-group,
+  .gform_wrapper .btn-group-vertical .button + .btn-group,
   .btn-group-vertical .btn-group + .btn,
-  .btn-group-vertical .gform_wrapper .btn-group + .button,
-  .gform_wrapper .btn-group-vertical .btn-group + .button,
   .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group + .gpnf-add-entry,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .btn-group + .gpnf-add-entry,
+  .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .btn-group + .gpnf-add-entry:hover,
+  .btn-group-vertical .gform_wrapper .btn-group + .button,
+  .gform_wrapper .btn-group-vertical .btn-group + .button,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2678,38 +2816,36 @@ body .gform_wrapper .gform_footer input.button[type="button"] {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child, .gform_wrapper .btn-group > .button:first-child, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:first-child {
+.btn-group > .btn:first-child, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:first-child, .gform_wrapper .btn-group > .button:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group > .button:not(:last-child):not(.dropdown-toggle), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group > .button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
-.gform_wrapper .btn-group > .btn-group:not(:last-child) > .button,
-body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .btn-group:not(:last-child) > .gpnf-add-entry {
+body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .btn-group:not(:last-child) > .gpnf-add-entry,
+.gform_wrapper .btn-group > .btn-group:not(:last-child) > .button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .gform_wrapper .btn-group > .button:not(:first-child), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:not(:first-child),
+.btn-group > .btn:not(:first-child), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .gpnf-add-entry:not(:first-child), .gform_wrapper .btn-group > .button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
-.gform_wrapper .btn-group > .btn-group:not(:first-child) > .button,
-body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .btn-group:not(:first-child) > .gpnf-add-entry {
+body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .btn-group:not(:first-child) > .gpnf-add-entry,
+.gform_wrapper .btn-group > .btn-group:not(:first-child) > .button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
 .dropdown-toggle-split {
   padding-right: 0.5625rem;
   padding-left: 0.5625rem; }
-  .dropdown-toggle-split::after,
-  .dropup .dropdown-toggle-split::after,
-  .dropright .dropdown-toggle-split::after {
+  .dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropright .dropdown-toggle-split::after {
     margin-left: 0; }
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .gform_wrapper .btn-group-sm > .button + .dropdown-toggle-split, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-sm > .gpnf-add-entry + .dropdown-toggle-split, body .gform_wrapper .gform_footer .button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, body .gform_wrapper .gform_footer .button + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-sm > .gpnf-add-entry + .dropdown-toggle-split, .gform_wrapper .btn-group-sm > .button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .gform_wrapper .btn-group-lg > .button + .dropdown-toggle-split, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-lg > .gpnf-add-entry + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-lg > .gpnf-add-entry + .dropdown-toggle-split, .gform_wrapper .btn-group-lg > .button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2717,47 +2853,43 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group > .btn
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .gform_wrapper .button, .gform_wrapper .btn-group-vertical .button, .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry,
+  .btn-group-vertical .btn, .btn-group-vertical body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical .gpnf-add-entry, .btn-group-vertical .gform_wrapper .button, .gform_wrapper .btn-group-vertical .button,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .gform_wrapper .btn-group-vertical > .button + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry + .btn, .gform_wrapper .btn-group-vertical > .btn + .button, .gform_wrapper .btn-group-vertical > .button + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .btn + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .button + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry + .gpnf-add-entry,
+  .btn-group-vertical > .btn + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .btn + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry + .gpnf-add-entry, .gform_wrapper .btn-group-vertical > .button + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .button + .gpnf-add-entry, .gform_wrapper .btn-group-vertical > .btn + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry + .button, .gform_wrapper .btn-group-vertical > .button + .button,
   .btn-group-vertical > .btn + .btn-group,
-  .gform_wrapper .btn-group-vertical > .button + .btn-group,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry + .btn-group,
+  .gform_wrapper .btn-group-vertical > .button + .btn-group,
   .btn-group-vertical > .btn-group + .btn,
-  .gform_wrapper .btn-group-vertical > .btn-group + .button,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .btn-group + .gpnf-add-entry,
+  .gform_wrapper .btn-group-vertical > .btn-group + .button,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:not(:last-child):not(.dropdown-toggle), .gform_wrapper .btn-group-vertical > .button:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-  .gform_wrapper .btn-group-vertical > .btn-group:not(:last-child) > .button,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .btn-group:not(:last-child) > .gpnf-add-entry {
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .btn-group:not(:last-child) > .gpnf-add-entry,
+  .gform_wrapper .btn-group-vertical > .btn-group:not(:last-child) > .button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .gform_wrapper .btn-group-vertical > .button:not(:first-child), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .gpnf-add-entry:not(:first-child), .gform_wrapper .btn-group-vertical > .button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-  .gform_wrapper .btn-group-vertical > .btn-group:not(:first-child) > .button,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .btn-group:not(:first-child) > .gpnf-add-entry {
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-vertical > .btn-group:not(:first-child) > .gpnf-add-entry,
+  .gform_wrapper .btn-group-vertical > .btn-group:not(:first-child) > .button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .gform_wrapper .btn-group-toggle > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .gpnf-add-entry,
+.btn-group-toggle > .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .gpnf-add-entry, .gform_wrapper .btn-group-toggle > .button,
 .btn-group-toggle > .btn-group > .btn,
-.gform_wrapper .btn-group-toggle > .btn-group > .button,
-body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .btn-group > .gpnf-add-entry {
+body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .btn-group > .gpnf-add-entry,
+.gform_wrapper .btn-group-toggle > .btn-group > .button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .gform_wrapper .btn-group-toggle > .button input[type="radio"], body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .gpnf-add-entry input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .gpnf-add-entry input[type="radio"], .gform_wrapper .btn-group-toggle > .button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
-  .gform_wrapper .btn-group-toggle > .button input[type="checkbox"],
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .gpnf-add-entry input[type="checkbox"],
+  .gform_wrapper .btn-group-toggle > .button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .gform_wrapper .btn-group-toggle > .btn-group > .button input[type="radio"],
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .btn-group > .gpnf-add-entry input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
-  .gform_wrapper .btn-group-toggle > .btn-group > .button input[type="checkbox"],
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle > .btn-group > .gpnf-add-entry input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2790,7 +2922,37 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control + .form-control, .gform_wrapper .input-group > input[type="email"] + .form-control, .gform_wrapper .input-group > input[type="date"] + .form-control, .gform_wrapper .input-group > input[type="datetime"] + .form-control, .gform_wrapper .input-group > input[type="datetime-local"] + .form-control, .gform_wrapper .input-group > input[type="month"] + .form-control, .gform_wrapper .input-group > input[type="number"] + .form-control, .gform_wrapper .input-group > input[type="password"] + .form-control, .gform_wrapper .input-group > input[type="search"] + .form-control, .gform_wrapper .input-group > input[type="tel"] + .form-control, .gform_wrapper .input-group > input[type="text"] + .form-control, .gform_wrapper .input-group > input[type="time"] + .form-control, .gform_wrapper .input-group > input[type="week"] + .form-control, .gform_wrapper .input-group > input[type="url"] + .form-control, .gform_wrapper .input-group > select + .form-control, .gform_wrapper .input-group > textarea + .form-control, body .gform_wrapper .chosen-container-multi .input-group > .chosen-choices + .form-control, .gform_wrapper .input-group > .form-control + input[type="email"], .gform_wrapper .input-group > input[type="email"] + input[type="email"], .gform_wrapper .input-group > input[type="date"] + input[type="email"], .gform_wrapper .input-group > input[type="datetime"] + input[type="email"], .gform_wrapper .input-group > input[type="datetime-local"] + input[type="email"], .gform_wrapper .input-group > input[type="month"] + input[type="email"], .gform_wrapper .input-group > input[type="number"] + input[type="email"], .gform_wrapper .input-group > input[type="password"] + input[type="email"], .gform_wrapper .input-group > input[type="search"] + input[type="email"], .gform_wrapper .input-group > input[type="tel"] + input[type="email"], .gform_wrapper .input-group > input[type="text"] + input[type="email"], .gform_wrapper .input-group > input[type="time"] + input[type="email"], .gform_wrapper .input-group > input[type="week"] + input[type="email"], .gform_wrapper .input-group > input[type="url"] + input[type="email"], .gform_wrapper .input-group > select + input[type="email"], .gform_wrapper .input-group > textarea + input[type="email"], body .gform_wrapper .chosen-container-multi .input-group > .chosen-choices + input[type="email"],
+    .input-group > .form-control + .form-control, .gform_wrapper .input-group > input[type="email"] + .form-control,
+    .gform_wrapper .input-group > input[type="date"] + .form-control,
+    .gform_wrapper .input-group > input[type="datetime"] + .form-control,
+    .gform_wrapper .input-group > input[type="datetime-local"] + .form-control,
+    .gform_wrapper .input-group > input[type="month"] + .form-control,
+    .gform_wrapper .input-group > input[type="number"] + .form-control,
+    .gform_wrapper .input-group > input[type="password"] + .form-control,
+    .gform_wrapper .input-group > input[type="search"] + .form-control,
+    .gform_wrapper .input-group > input[type="tel"] + .form-control,
+    .gform_wrapper .input-group > input[type="text"] + .form-control,
+    .gform_wrapper .input-group > input[type="time"] + .form-control,
+    .gform_wrapper .input-group > input[type="week"] + .form-control,
+    .gform_wrapper .input-group > input[type="url"] + .form-control,
+    .gform_wrapper .input-group > select + .form-control,
+    .gform_wrapper .input-group > textarea + .form-control,
+    body .gform_wrapper .chosen-container-multi .input-group > .chosen-choices + .form-control, .gform_wrapper .input-group > .form-control + input[type="email"], .gform_wrapper .input-group > input[type="email"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="date"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="datetime"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="datetime-local"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="month"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="number"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="password"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="search"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="tel"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="text"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="time"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="week"] + input[type="email"],
+    .gform_wrapper .input-group > input[type="url"] + input[type="email"],
+    .gform_wrapper .input-group > select + input[type="email"],
+    .gform_wrapper .input-group > textarea + input[type="email"],
+    body .gform_wrapper .chosen-container-multi .input-group > .chosen-choices + input[type="email"],
     .gform_wrapper .input-group > .form-control + input[type="date"],
     .gform_wrapper .input-group > input[type="email"] + input[type="date"],
     .gform_wrapper .input-group > input[type="date"] + input[type="date"],
@@ -3181,8 +3343,7 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle
   .input-group > .custom-file {
     display: flex;
     align-items: center; }
-    .input-group > .custom-file:not(:last-child) .custom-file-label,
-    .input-group > .custom-file:not(:last-child) .custom-file-label::after {
+    .input-group > .custom-file:not(:last-child) .custom-file-label, .input-group > .custom-file:not(:last-child) .custom-file-label::after {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0; }
     .input-group > .custom-file:not(:first-child) .custom-file-label {
@@ -3192,56 +3353,84 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-toggle
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .gform_wrapper .button, .gform_wrapper .input-group-prepend .button, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry,
+  .input-group-prepend .btn, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry, .input-group-prepend .gform_wrapper .button, .gform_wrapper .input-group-prepend .button,
   .input-group-append .btn,
-  .input-group-append .gform_wrapper .button,
-  .gform_wrapper .input-group-append .button,
   .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry {
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry,
+  .input-group-append .gform_wrapper .button,
+  .gform_wrapper .input-group-append .button {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .gform_wrapper .button + .btn, .gform_wrapper .input-group-prepend .button + .btn, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .btn, .input-group-prepend .gform_wrapper .btn + .button, .gform_wrapper .input-group-prepend .btn + .button, .input-group-prepend .gform_wrapper .button + .button, .gform_wrapper .input-group-prepend .button + .button, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .button, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .btn + .gpnf-add-entry, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .input-group-prepend .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .gform_wrapper .input-group-prepend .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .button + .gpnf-add-entry, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .gpnf-add-entry,
+  .input-group-prepend .btn + .btn, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .btn, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry:hover + .btn, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .btn + .gpnf-add-entry, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .gpnf-add-entry, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry:hover + .gpnf-add-entry, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .btn + .gpnf-add-entry:hover, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .gpnf-add-entry:hover, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry:hover + .gpnf-add-entry:hover, .input-group-prepend .gform_wrapper .button + .btn, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .input-group-prepend .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover, body .input-group-prepend .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover, .gform_wrapper .input-group-prepend .button + .btn, body .gform_wrapper .input-group-prepend .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .button + .gpnf-add-entry, body .gform_wrapper .input-group-prepend .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .button + .gpnf-add-entry:hover, .input-group-prepend .gform_wrapper .btn + .button, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, body .input-group-prepend .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button, body .input-group-prepend .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button, .gform_wrapper .input-group-prepend .btn + .button, body .gform_wrapper .input-group-prepend .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .button, body .gform_wrapper .input-group-prepend .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry:hover + .button, .input-group-prepend .gform_wrapper .button + .button, .gform_wrapper .input-group-prepend .button + .button,
   .input-group-prepend .btn + .input-group-text,
-  .input-group-prepend .gform_wrapper .button + .input-group-text,
-  .gform_wrapper .input-group-prepend .button + .input-group-text,
   .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .input-group-text,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry + .input-group-text,
+  .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .input-group-text,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .gpnf-add-entry:hover + .input-group-text,
+  .input-group-prepend .gform_wrapper .button + .input-group-text,
+  .gform_wrapper .input-group-prepend .button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
-  .input-group-prepend .gform_wrapper .input-group-text + .button,
-  .gform_wrapper .input-group-prepend .input-group-text + .button,
   .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-text + .gpnf-add-entry,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .input-group-text + .gpnf-add-entry,
+  .input-group-prepend body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-text + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-prepend .input-group-text + .gpnf-add-entry:hover,
+  .input-group-prepend .gform_wrapper .input-group-text + .button,
+  .gform_wrapper .input-group-prepend .input-group-text + .button,
   .input-group-append .btn + .btn,
-  .input-group-append .gform_wrapper .button + .btn,
-  .gform_wrapper .input-group-append .button + .btn,
   .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .btn,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry + .btn,
-  .input-group-append .gform_wrapper .btn + .button,
-  .gform_wrapper .input-group-append .btn + .button,
-  .input-group-append .gform_wrapper .button + .button,
-  .gform_wrapper .input-group-append .button + .button,
-  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry + .button,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .btn,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry:hover + .btn,
   .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .btn + .gpnf-add-entry,
-  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
-  body .input-group-append .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
-  body .gform_wrapper .input-group-append .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .button + .gpnf-add-entry,
   .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry + .gpnf-add-entry,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry:hover + .gpnf-add-entry,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .btn + .gpnf-add-entry:hover,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry + .gpnf-add-entry:hover,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry:hover + .gpnf-add-entry:hover,
+  .input-group-append .gform_wrapper .button + .btn,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
+  body .input-group-append .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover,
+  body .input-group-append .gform_wrapper .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover,
+  .gform_wrapper .input-group-append .button + .btn,
+  body .gform_wrapper .input-group-append .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .button + .gpnf-add-entry,
+  body .gform_wrapper .input-group-append .gform_body .gpnf-nested-entries-container .button + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .button + .gpnf-add-entry:hover,
+  .input-group-append .gform_wrapper .btn + .button,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
+  body .input-group-append .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button,
+  body .input-group-append .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button,
+  .gform_wrapper .input-group-append .btn + .button,
+  body .gform_wrapper .input-group-append .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .button,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry + .button,
+  body .gform_wrapper .input-group-append .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .button,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry:hover + .button,
+  .input-group-append .gform_wrapper .button + .button,
+  .gform_wrapper .input-group-append .button + .button,
   .input-group-append .btn + .input-group-text,
-  .input-group-append .gform_wrapper .button + .input-group-text,
-  .gform_wrapper .input-group-append .button + .input-group-text,
   .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry + .input-group-text,
   body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry + .input-group-text,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover + .input-group-text,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .gpnf-add-entry:hover + .input-group-text,
+  .input-group-append .gform_wrapper .button + .input-group-text,
+  .gform_wrapper .input-group-append .button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
-  .input-group-append .gform_wrapper .input-group-text + .button,
-  .gform_wrapper .input-group-append .input-group-text + .button,
   .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-text + .gpnf-add-entry,
-  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .input-group-text + .gpnf-add-entry {
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .input-group-text + .gpnf-add-entry,
+  .input-group-append body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-text + .gpnf-add-entry:hover,
+  body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-append .input-group-text + .gpnf-add-entry:hover,
+  .input-group-append .gform_wrapper .input-group-text + .button,
+  .gform_wrapper .input-group-append .input-group-text + .button {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3287,11 +3476,11 @@ body .gform_wrapper .chosen-container-multi .input-group-lg > .chosen-choices,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.gform_wrapper .input-group-lg > .input-group-prepend > .button,
 body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-lg > .input-group-prepend > .gpnf-add-entry,
+.gform_wrapper .input-group-lg > .input-group-prepend > .button,
 .input-group-lg > .input-group-append > .btn,
-.gform_wrapper .input-group-lg > .input-group-append > .button,
-body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-lg > .input-group-append > .gpnf-add-entry {
+body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-lg > .input-group-append > .gpnf-add-entry,
+.gform_wrapper .input-group-lg > .input-group-append > .button {
   height: calc(2.8rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
@@ -3317,39 +3506,39 @@ body .gform_wrapper .chosen-container-multi .input-group-sm > .chosen-choices,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.gform_wrapper .input-group-sm > .input-group-prepend > .button,
 body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-sm > .input-group-prepend > .gpnf-add-entry,
+.gform_wrapper .input-group-sm > .input-group-prepend > .button,
 .input-group-sm > .input-group-append > .btn,
-.gform_wrapper .input-group-sm > .input-group-append > .button,
-body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-sm > .input-group-append > .gpnf-add-entry {
+body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group-sm > .input-group-append > .gpnf-add-entry,
+.gform_wrapper .input-group-sm > .input-group-append > .button {
   height: calc(2.07rem + 2px);
   padding: 0.45rem 0.5rem;
   font-size: 0.9rem;
   line-height: 1.3;
   border-radius: 0.2rem; }
 
-.input-group > .input-group-prepend > .btn, .gform_wrapper .input-group > .input-group-prepend > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-prepend > .gpnf-add-entry,
+.input-group > .input-group-prepend > .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-prepend > .gpnf-add-entry, .gform_wrapper .input-group > .input-group-prepend > .button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
-.gform_wrapper .input-group > .input-group-append:not(:last-child) > .button,
 body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-append:not(:last-child) > .gpnf-add-entry,
+.gform_wrapper .input-group > .input-group-append:not(:last-child) > .button,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.gform_wrapper .input-group > .input-group-append:last-child > .button:not(:last-child):not(.dropdown-toggle),
 body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-append:last-child > .gpnf-add-entry:not(:last-child):not(.dropdown-toggle),
+.gform_wrapper .input-group > .input-group-append:last-child > .button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .gform_wrapper .input-group > .input-group-append > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-append > .gpnf-add-entry,
+.input-group > .input-group-append > .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-append > .gpnf-add-entry, .gform_wrapper .input-group > .input-group-append > .button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
-.gform_wrapper .input-group > .input-group-prepend:not(:first-child) > .button,
 body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-prepend:not(:first-child) > .gpnf-add-entry,
+.gform_wrapper .input-group > .input-group-prepend:not(:first-child) > .button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.gform_wrapper .input-group > .input-group-prepend:first-child > .button:not(:first-child),
 body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .input-group-prepend:first-child > .gpnf-add-entry:not(:first-child),
+.gform_wrapper .input-group > .input-group-prepend:first-child > .button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3634,7 +3823,6 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .i
     .custom-file-label,
     .custom-select {
       transition: none; } }
-
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -4063,7 +4251,6 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .i
         margin-right: 15px;
         margin-bottom: 0;
         margin-left: 15px; } }
-
 .card-group {
   display: flex;
   flex-direction: column; }
@@ -4113,7 +4300,6 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .i
           .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-header,
           .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-footer {
             border-radius: 0; } }
-
 .card-columns .card {
   margin-bottom: 0.75rem; }
 
@@ -4258,7 +4444,7 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .i
   .badge:empty {
     display: none; }
 
-.btn .badge, .gform_wrapper .button .badge, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry .badge {
+.btn .badge, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry .badge, .gform_wrapper .button .badge {
   position: relative;
   top: -1px; }
 
@@ -4339,7 +4525,6 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .i
   @media (min-width: 576px) {
     .jumbotron {
       padding: 4rem 2rem; } }
-
 .jumbotron-fluid {
   padding-right: 0;
   padding-left: 0;
@@ -4412,15 +4597,19 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .i
   .alert-warning .alert-link {
     color: #533f03; }
 
-.alert-danger, .gform_wrapper .gfield_error .gfield_label, .gform_wrapper .gfield_error input,
+.alert-danger, .validation_error, .gform_wrapper .gfield_error input,
 .gform_wrapper .gfield_error select,
-.gform_wrapper .gfield_error textarea, .validation_error {
+.gform_wrapper .gfield_error textarea, .gform_wrapper .gfield_error .gfield_label {
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb; }
-  .alert-danger hr, .gform_wrapper .gfield_error .gfield_label hr, .gform_wrapper .gfield_error input hr, .gform_wrapper .gfield_error select hr, .gform_wrapper .gfield_error textarea hr, .validation_error hr {
+  .alert-danger hr, .validation_error hr, .gform_wrapper .gfield_error input hr,
+  .gform_wrapper .gfield_error select hr,
+  .gform_wrapper .gfield_error textarea hr, .gform_wrapper .gfield_error .gfield_label hr {
     border-top-color: #f1b0b7; }
-  .alert-danger .alert-link, .gform_wrapper .gfield_error .gfield_label .alert-link, .gform_wrapper .gfield_error input .alert-link, .gform_wrapper .gfield_error select .alert-link, .gform_wrapper .gfield_error textarea .alert-link, .validation_error .alert-link {
+  .alert-danger .alert-link, .validation_error .alert-link, .gform_wrapper .gfield_error input .alert-link,
+  .gform_wrapper .gfield_error select .alert-link,
+  .gform_wrapper .gfield_error textarea .alert-link, .gform_wrapper .gfield_error .gfield_label .alert-link {
     color: #491217; }
 
 .alert-light {
@@ -4467,7 +4656,6 @@ body .gform_wrapper .gform_body .gpnf-nested-entries-container .input-group > .i
   @media screen and (prefers-reduced-motion: reduce) {
     .progress-bar {
       transition: none; } }
-
 .progress-bar-striped {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem; }
@@ -4899,9 +5087,7 @@ button.close {
   .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before {
     bottom: 0;
     border-top-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-top .arrow::after,
-  .bs-popover-auto[x-placement^="top"] .arrow::after {
+  .bs-popover-top .arrow::after, .bs-popover-auto[x-placement^="top"] .arrow::after {
     bottom: 1px;
     border-top-color: #fff; }
 
@@ -4919,9 +5105,7 @@ button.close {
   .bs-popover-right .arrow::before, .bs-popover-auto[x-placement^="right"] .arrow::before {
     left: 0;
     border-right-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-right .arrow::after,
-  .bs-popover-auto[x-placement^="right"] .arrow::after {
+  .bs-popover-right .arrow::after, .bs-popover-auto[x-placement^="right"] .arrow::after {
     left: 1px;
     border-right-color: #fff; }
 
@@ -4936,9 +5120,7 @@ button.close {
   .bs-popover-bottom .arrow::before, .bs-popover-auto[x-placement^="bottom"] .arrow::before {
     top: 0;
     border-bottom-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-bottom .arrow::after,
-  .bs-popover-auto[x-placement^="bottom"] .arrow::after {
+  .bs-popover-bottom .arrow::after, .bs-popover-auto[x-placement^="bottom"] .arrow::after {
     top: 1px;
     border-bottom-color: #fff; }
   .bs-popover-bottom .popover-header::before, .bs-popover-auto[x-placement^="bottom"] .popover-header::before {
@@ -4965,9 +5147,7 @@ button.close {
   .bs-popover-left .arrow::before, .bs-popover-auto[x-placement^="left"] .arrow::before {
     right: 0;
     border-left-color: rgba(0, 0, 0, 0.25); }
-  
-  .bs-popover-left .arrow::after,
-  .bs-popover-auto[x-placement^="left"] .arrow::after {
+  .bs-popover-left .arrow::after, .bs-popover-auto[x-placement^="left"] .arrow::after {
     right: 1px;
     border-left-color: #fff; }
 
@@ -5013,7 +5193,6 @@ button.close {
     .carousel-item-next,
     .carousel-item-prev {
       transition: none; } }
-
 .carousel-item-next,
 .carousel-item-prev {
   position: absolute;
@@ -7199,9 +7378,9 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #000; }
   .table, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-nested-entries {
     border-collapse: collapse !important; }
-    
-    .table td,
-    body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-nested-entries td, .table th, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-nested-entries th {
+    .table td, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-nested-entries td,
+    .table th,
+    body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-nested-entries th {
       background-color: #fff !important; }
   .table-bordered th, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-nested-entries th,
   .table-bordered td,
@@ -7260,19 +7439,22 @@ strong {
   padding-top: .5em;
   padding-bottom: .5em; }
 
-.btn, .gform_wrapper .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .btn-sm, .btn-group-sm > .btn, .gform_wrapper .btn-group-sm > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-sm > .gpnf-add-entry, body .gform_wrapper .gform_footer .button {
+.btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button,
+.btn-sm,
+body .gform_wrapper .gform_footer .button,
+.btn-group-sm > .btn {
   border-radius: 0px; }
 
-.btn, .gform_wrapper .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover {
+.btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 400;
   padding: .675rem 1.6rem; }
 
-.btn-lg, .btn-group-lg > .btn, .gform_wrapper .btn-group-lg > .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-lg > .gpnf-add-entry {
+.btn-lg, .btn-group-lg > .btn, body .gform_wrapper .gform_body .gpnf-nested-entries-container .btn-group-lg > .gpnf-add-entry, .gform_wrapper .btn-group-lg > .button {
   font-weight: normal; }
 
-.btn-primary, .gform_wrapper .button, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover {
+.btn-primary, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, .gform_wrapper .button {
   color: white; }
 
 .btn-white {
@@ -7303,7 +7485,7 @@ h3, h4, h5 {
 h4 {
   font-size: 1rem; }
 
-p, body ol, body ul, body dl, body ol, body ul, body dl {
+p, body ol, body ul, body dl {
   margin-bottom: 1.2em; }
 
 .blog-list-wrap .moretag {
@@ -7312,6 +7494,10 @@ p, body ol, body ul, body dl, body ol, body ul, body dl {
 
 .wp-caption {
   max-width: 100%; }
+
+@media (max-width: 767.98px) {
+  .wp-caption {
+    width: 100%; } }
 
 /*
 ** Componant: Global Header
@@ -7376,6 +7562,14 @@ p, body ol, body ul, body dl, body ol, body ul, body dl {
   .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
     background-color: #d3af1d;
     color: white; }
+
+.navbar .ubermenu-skin-black-silver {
+  border: none;
+  background: none;
+  box-shadow: none; }
+
+.ubermenu-mobile-view .ubermenu-item-level-2 {
+  padding-left: 2em !important; }
 
 /*
 ** Component: Content Area
@@ -7495,7 +7689,7 @@ p, body ol, body ul, body dl, body ol, body ul, body dl {
   -webkit-box-shadow: 0 -2px 10px -2px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 -2px 10px -2px rgba(0, 0, 0, 0.7);
   box-shadow: 0 -2px 10px -2px rgba(0, 0, 0, 0.7); }
-  #footer p, #footer body ol, body #footer ol, #footer body ul, body #footer ul, #footer body dl, body #footer dl, #footer .btn, #footer .gform_wrapper .button, .gform_wrapper #footer .button, #footer body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container #footer .gpnf-add-entry, #footer .link, #footer .link:hover {
+  #footer p, #footer body ol, body #footer ol, #footer body ul, body #footer ul, #footer body dl, body #footer dl, #footer .btn, #footer body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry, body .gform_wrapper .gform_body .gpnf-nested-entries-container #footer .gpnf-add-entry, #footer body .gform_wrapper .gform_body .gpnf-nested-entries-container .gpnf-add-entry:hover, body .gform_wrapper .gform_body .gpnf-nested-entries-container #footer .gpnf-add-entry:hover, #footer .gform_wrapper .button, .gform_wrapper #footer .button, #footer .link, #footer .link:hover {
     color: white; }
   #footer a {
     color: #e8cb55; }
@@ -7710,7 +7904,7 @@ body .gform_wrapper .gform_body .ginput_container_email {
 body .gform_wrapper .gform_body .field_description_below .gfield_description {
   padding-top: 5px; }
 
-body .gform_wrapper .gform_body .field_description_below .gfield_description, body .gform_wrapper .gform_body .field_sublabel_above .ginput_complex.ginput_container label, body .gform_wrapper .gform_body .field_sublabel_above div[class*=gfield_date_].ginput_container label, body .gform_wrapper .gform_body .field_sublabel_above div[class*=gfield_time_].ginput_container label, body .gform_wrapper .gform_body .field_sublabel_below .ginput_complex.ginput_container label, body .gform_wrapper .gform_body .field_sublabel_below div[class*=gfield_date_].ginput_container label, body .gform_wrapper .gform_body .field_sublabel_below div[class*=gfield_time_].ginput_container label {
+body .gform_wrapper .gform_body .field_description_below .gfield_description, body .gform_wrapper .gform_body .field_sublabel_above .ginput_complex.ginput_container label, body .gform_wrapper .gform_body .field_sublabel_above div.ginput_container[class*=gfield_date_] label, body .gform_wrapper .gform_body .field_sublabel_above div.ginput_container[class*=gfield_time_] label, body .gform_wrapper .gform_body .field_sublabel_below .ginput_complex.ginput_container label, body .gform_wrapper .gform_body .field_sublabel_below div.ginput_container[class*=gfield_date_] label, body .gform_wrapper .gform_body .field_sublabel_below div.ginput_container[class*=gfield_time_] label {
   font-weight: 500;
   font-size: .813em;
   letter-spacing: .5pt;
