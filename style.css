@@ -7578,7 +7578,7 @@ p, body ol, body ul, body dl {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2); }
 
 #content-area {
-  background: url(assets/img/pattern.jpg) top repeat; }
+  background: url("https://pmiclab.com/wp-content/themes/pmiclab/assets/img/pattern.jpg") top repeat; }
   #content-area #content {
     background-color: white;
     padding: 3em; }
