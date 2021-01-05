@@ -381,6 +381,9 @@ p, body ol, body ul, body dl {
 	#menu-footer-menu {
 		@extend .list-unstyled;
 	}
+	.fab {
+		font-size: 1.3em;
+	}
 }
 #footer-bottom {
 	a {

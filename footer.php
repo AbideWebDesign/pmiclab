@@ -31,7 +31,7 @@
 				</div>
 				<div id="footer-contact" class="col-12 col-md-6 col-lg-4 col-xl-3 order-4 order-lg-3">
 					<h4 class="text-white mb-1">Contact Us</h4>
-					<ul class="list-unstyled m-2">
+					<ul class="list-unstyled mb-1">
 						<li>3665 SW Deschutes Street<br>Corvallis, OR 97333-9285</li>
 						<li><strong>Tel:</strong> <a class="link" href="tel:5417530607">(541) 753-0607</a></li>
 						<li><strong>Fax:</strong> (541) 753-0610</li>
