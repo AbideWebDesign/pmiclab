@@ -175,11 +175,17 @@ require_once("bs4Navwalker.php");
  * Add Bootstrap 4 inline list classes
  */
 function bootstrap_inline_list_class($classes, $item, $args) {
-    if( $args->add_li_class ) {
+    
+    if ( isset( $args->add_li_class ) ) {
+       
         $classes[] = $args->add_li_class;
+    
     }
+    
     return $classes;
+
 }
+
 add_filter('nav_menu_css_class', 'bootstrap_inline_list_class', 1, 3);
 
 /**
@@ -254,4 +260,4 @@ function spinner_url($image_src, $form) {
 	return  'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 }
-add_filter("gform_ajax_spinner_url_1", "spinner_url", 10, 2);
+add_filter( 'gform_ajax_spinner_url_1', 'spinner_url', 10, 2 );

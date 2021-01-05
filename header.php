@@ -85,7 +85,7 @@
 							<div id="header-text">3665 SW Deschutes Street<br>Corvallis, Oregon 97333-9285<br>Tel: <a class="link" href="tel:5417530607">(541) 753-0607</a><br>Fax: (541) 753-0610<br><a href="mailto:info@pmiclab.com">info@pmiclab.com</a></div>
 						</div>
 						<div class="col-md-2 align-self-center d-none d-md-block">
-							<img src="<?php echo home_url('/wp-content/themes/pmiclab/assets/img/logo-ias.jpg'); ?>" class="img-fluid" />
+							<a href="https://www.iasonline.org/ias_certificate/tl-388/" target="_blank"><img src="<?php echo home_url('/wp-content/themes/pmiclab/assets/img/logo-ias.jpg'); ?>" class="img-fluid" /></a>
 						</div>
 					</div>
 				</div>
