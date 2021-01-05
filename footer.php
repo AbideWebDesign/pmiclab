@@ -31,12 +31,14 @@
 				</div>
 				<div id="footer-contact" class="col-12 col-md-6 col-lg-4 col-xl-3 order-4 order-lg-3">
 					<h4 class="text-white mb-1">Contact Us</h4>
-					<ul class="list-unstyled m-0">
+					<ul class="list-unstyled m-2">
 						<li>3665 SW Deschutes Street<br>Corvallis, OR 97333-9285</li>
 						<li><strong>Tel:</strong> <a class="link" href="tel:5417530607">(541) 753-0607</a></li>
 						<li><strong>Fax:</strong> (541) 753-0610</li>
 						<li><a href="mailto:info@pmiclab.com">info@pmiclab.com</a></li>
 					</ul>
+					<a href="https://www.linkedin.com/company/precision-measurements-and-instruments-corporation" target="_blank"><i class="fab fa-linkedin text-white"></i></a>
+					
 				</div>
 				<div class="col-12 col-md-12 col-lg-4 col-xl-3 align-self-center text-center order-1 order-lg-4 mb-3 mb-lg-0">
 					<a class="btn btn-primary btn-lg" href="https://www.pmiclab.com/inquire/">Request a Quote</a>
