@@ -11,7 +11,7 @@
 
 ?>
 
-	<div id="footer" class="bg-secondary py-3 d-print-none">
+	<div id="footer" class="bg-secondary py-2 d-print-none">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 d-none d-xl-block order-lg-1">
