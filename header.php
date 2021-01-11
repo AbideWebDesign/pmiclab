@@ -74,17 +74,17 @@
 <body <?php body_class(); ?>>
 	<div id="header" class="py-1">
 		<div class="container">
-			<div class="row align-items-center">
-				<div id="col-logo" class="col-12 col-sm-4 col-md-4 col-lg-6 text-center text-lg-left align-self-center">
+			<div class="row justify-content-center justify-content-md-between align-items-center">
+				<div id="col-logo" class="col-7 col-sm-4 col-md-4 col-lg-6 text-center text-lg-left align-self-center">
 					<a href="<?php echo home_url(); ?>"><?php echo wp_get_attachment_image('210', 'full', false, array("class" => "img-fluid", "style" => "width: 250px")); ?></a>
 				</div>
-				<div class="col-12 col-sm-8 col-md-8 col-lg-6 d-none d-sm-block d-print-none">
+				<div class="col-3 col-sm-8 col-md-8 col-lg-6 d-print-none">
 					<div class="row">
-						<div class="col-12 col-md-10 text-right">
+						<div class="col-12 col-md-10 text-right d-none d-sm-block ">
 							<div id="header-sub" class="d-none d-md-block">PRECISION TODAY for TOMORROW’S PRODUCTS</div>
 							<div id="header-text">3665 SW Deschutes Street<br>Corvallis, Oregon 97333-9285<br>Tel: <a class="link" href="tel:5417530607">(541) 753-0607</a><br>Fax: (541) 753-0610<br><a href="mailto:info@pmiclab.com">info@pmiclab.com</a></div>
 						</div>
-						<div class="col-md-2 align-self-center d-none d-md-block">
+						<div class="col-md-2 align-self-center">
 							<a href="https://www.iasonline.org/ias_certificate/tl-388/" target="_blank"><img src="<?php echo home_url('/wp-content/themes/pmiclab/assets/img/logo-ias.jpg'); ?>" class="img-fluid" /></a>
 						</div>
 					</div>
