@@ -40,6 +40,8 @@
 	
 <?php endif; ?>
 
+<?php echo get_template_part('template-parts/block', 'company-logos'); ?>
+
 <div class="border-top pt-2 text-sm">
 	
 	<?php the_field('footer_text'); ?>

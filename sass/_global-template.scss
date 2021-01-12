@@ -242,6 +242,54 @@ p, body ol, body ul, body dl {
 	}	
 }
 
+
+/*
+** Component:  Companies Carousel
+*/
+#companies-carousel, #companies-carousel-mobile {
+	.carousel-item {
+		display: flex;
+	}
+	.carousel-item:not(.active) {
+		display: none;
+	}
+	.carousel-control-prev, .carousel-control-next {
+		width: 5%;
+	}
+	.carousel-control-prev {
+		left: -20px;
+	}
+	.carousel-control-next {
+		right: -20px;
+	}
+	.carousel-control-next-icon, .carousel-control-prev-icon {
+		width: 20px;
+		height: 37px;
+		
+		@include media-breakpoint-down(xs) {
+			width: 25px;
+			height: 38px;
+		}
+	}
+	.carousel-control-prev-icon {
+	    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%77777' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+	}
+	
+	.carousel-control-next-icon {
+	    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%77777' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+	}
+}
+#companies-carousel-mobile {
+	.carousel-item {
+		height: 250px;
+	}
+	.carousel-control-prev {
+		left: 0px;
+	}
+	.carousel-control-next {
+		right: 0px;
+	}
+}
 /*
 ** Component: Sub Navigation
 */
