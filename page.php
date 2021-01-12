@@ -67,7 +67,13 @@ get_header();
 							<?php else: ?>
 							
 								<?php the_content(); ?>
-							
+								
+								<?php if ( is_page('company-information') ): ?>
+								
+									<?php get_template_part('template-parts/block', 'company-logos'); ?>
+								
+								<?php endif; ?>
+								
 							<?php endif; ?>
 						
 						<?php endwhile; ?>
