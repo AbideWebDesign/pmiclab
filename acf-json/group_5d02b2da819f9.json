@@ -73,6 +73,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5ffdf465d7d8f",
+            "label": "Visible",
+            "name": "company_logos_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5ffca20e41939",
             "label": "Title",
             "name": "company_logos_title",
@@ -170,5 +189,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610392091
+    "modified": 1610478773
 }
