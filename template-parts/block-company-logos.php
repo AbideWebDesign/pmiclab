@@ -32,7 +32,27 @@
 									
 										<div class="border p-1 h-100 d-flex align-content-center">
 											
-											<a class="align-self-center" target="_blank" href="<?php the_sub_field('link'); ?>"><?php echo wp_get_attachment_image( get_sub_field('logo'), 'medium', false, array('class'=>'img-fluid') ); ?></a>
+											<?php if ( get_sub_field('link') ): ?>
+											
+												<a class="align-self-center" target="_blank" href="<?php the_sub_field('link'); ?>">
+													
+											<?php else: ?>
+											
+												<div class="align-self-center">
+													
+											<?php endif; ?>
+											
+												<?php echo wp_get_attachment_image( get_sub_field('logo'), 'medium', false, array('class'=>'img-fluid') ); ?>
+												
+											<?php if ( get_sub_field('link') ): ?>
+											
+												</a>
+											
+											<?php else: ?>
+											
+												</div>
+												
+											<?php endif; ?>
 																			
 										</div>
 									
@@ -90,7 +110,27 @@
 						    								
 									<div class="border p-1 h-100 d-flex align-content-center">
 										
-										<a class="align-self-center" target="_blank" href="<?php the_sub_field('link'); ?>"><?php echo wp_get_attachment_image( get_sub_field('logo'), 'medium', false, array('class'=>'img-fluid') ); ?></a>
+										<?php if ( get_sub_field('link') ): ?>
+										
+											<a class="align-self-center" target="_blank" href="<?php the_sub_field('link'); ?>">
+										
+										<?php else: ?>
+											
+											<div class="align-self-center">
+															
+										<?php endif; ?>
+										
+										<?php echo wp_get_attachment_image( get_sub_field('logo'), 'medium', false, array('class'=>'img-fluid') ); ?>
+										
+										<?php if ( get_sub_field('link') ): ?>
+										
+											</a>
+											
+										<?php else: ?>
+										
+											</div>
+											
+										<?php endif; ?>
 																		
 									</div>
 									
@@ -124,6 +164,6 @@
 			
 		</div>
 		
-	<?php endif; ?>
+	<?php endif; ?>	
 	
 <?php endif; ?>
