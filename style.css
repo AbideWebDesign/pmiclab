@@ -5,7 +5,7 @@ Theme URI: https://abidewebdesign.com
 Author: Abide Web Design
 Author URI: https://abidewebdesign.com
 Description: The Official Theme of PMIC Lab.
-Version: 1.7.3
+Version: 1.7.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: pmiclab
@@ -10622,4 +10622,24 @@ body .pum-theme-lightbox .pum-content {
 }
 body .pum-theme-lightbox .pum-title {
   font-weight: normal;
+}
+
+@media (min-width: 992px) {
+  .table-right .ninja_table_wrapper, .table-left .ninja_table_wrapper {
+    max-width: 62%;
+  }
+}
+
+@media (min-width: 992px) {
+  .table-right .ninja_table_wrapper {
+    float: right;
+    margin-left: 1.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .table-left .ninja_table_wrapper {
+    float: left;
+    margin-right: 1.5em;
+  }
 }

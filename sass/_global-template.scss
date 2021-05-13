@@ -970,3 +970,26 @@ body .pum-theme-lightbox {
 		font-weight: normal;
 	}
 }
+.table-right, .table-left {
+	@include media-breakpoint-up(lg) {
+		.ninja_table_wrapper {
+			max-width: 62%;
+		}	
+	}
+}
+.table-right {
+	@include media-breakpoint-up(lg) {
+		.ninja_table_wrapper {
+			float: right;
+			margin-left: 1.5em;
+		}	
+	}
+}
+.table-left {
+	@include media-breakpoint-up(lg) {
+		.ninja_table_wrapper {
+			float: left;
+			margin-right: 1.5em;
+		}	
+	}
+}

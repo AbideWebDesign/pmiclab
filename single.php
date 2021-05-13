@@ -8,8 +8,16 @@
  */
 
 get_header();
+
+if ( get_field('table_alignment') == 'Right' ) {
+	$table_class = 'table-right';
+} elseif ( get_field('table_alignment') == 'Left' ) {
+	$table_class = 'table-left';
+} else {
+	$table_class = 'table-full';
+}
 ?>
-<div id="content-area">
+<div id="content-area" class="<?php echo $table_class; ?>">
 	<div class="container">
 		<div id="content">
 			<div class="row d-none d-md-block">
