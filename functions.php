@@ -239,16 +239,7 @@ function show_pagination_links() {
 // Replaces the excerpt "Read More" text by a link
 function new_excerpt_more($more) {
 
-    if ( is_archive() ) {
-    	
-    	global $post;
-		
-	} else {
-		
-		$post_id = get_field('featured_news');
-		
-		return '... <a class="moretag" href="'. get_permalink($post_id) . '">Read the full article</a>';
-	}
+	return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

@@ -19,6 +19,8 @@
 			<div class="mb-1"><?php echo get_the_date(); ?></div>
 			
 			<?php the_excerpt(); ?>
+			
+			<div class="mt-2"><a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm text-white">Read More</a></div>
 		
 		</div>
 	</div>

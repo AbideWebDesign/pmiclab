@@ -6,7 +6,8 @@
 		<a href="<?php the_permalink($_post->ID); ?>"><?php echo get_the_post_thumbnail($_post->ID, 'col-3', array('class'=>'img-fluid w-100'))?></a>
 		<div class="p-1">
 			<h3 class="mb-1 text-white"><a href="<?php the_permalink($_post->ID); ?>"><?php echo get_the_title($_post->ID); ?></a></h3>
-			<div class="featured_news_text"><?php echo get_the_excerpt($_post->ID); ?></div>
+			<div class="featured_news_text mb-1"><?php echo get_the_excerpt($_post->ID); ?></div>
+			<a class="btn btn-primary btn-sm text-white" href="<?php the_permalink($_post->ID); ?>">Read More</a>
 		</div>
 	</div>
 	
@@ -21,7 +22,8 @@
 		</div>
 		<div class="col-lg-9 bg-blue featured_news	p-1">
 			<h3 class="mb-1 text-white"><a href="<?php the_permalink($_post->ID); ?>"><?php echo get_the_title($_post->ID); ?></a></h3>
-			<div class="featured_news_text"><?php echo get_the_excerpt($_post->ID); ?></div>
+			<div class="featured_news_text mb-1"><?php echo get_the_excerpt($_post->ID); ?></div>
+			<a class="btn btn-primary btn-sm text-white" href="<?php the_permalink($_post->ID); ?>">Read More</a>
 		</div>
 	</div>
 
